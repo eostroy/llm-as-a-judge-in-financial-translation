@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSONL Translation Editor</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d9dee7;
+      --accent: #0f766e;
+      --accent-weak: #e6f5f2;
+      --warn: #b45309;
+      --bad: #b42318;
+      --good: #047857;
+      --shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+    }
+
+    button {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      height: 34px;
+      min-width: 34px;
+      padding: 0 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover { border-color: var(--accent); }
+    button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+    button.icon { padding: 0; width: 34px; }
+
+    .app {
+      display: grid;
+      grid-template-columns: minmax(300px, 390px) minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      height: 100vh;
+    }
+
+    header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 14px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .toolbar input[type="file"] {
+      max-width: 245px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    aside {
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      min-width: 0;
+    }
+
+    .filters {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr 92px;
+      gap: 8px;
+    }
+
+    input[type="search"], select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      height: 34px;
+      background: white;
+      color: var(--ink);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 6px;
+      min-width: 0;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .list {
+      overflow: auto;
+    }
+
+    .row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 9px 10px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      text-align: left;
+      border-radius: 0;
+      height: auto;
+      min-height: 52px;
+    }
+
+    .row:hover { background: #f8fafc; }
+    .row.active { background: var(--accent-weak); }
+
+    .row-id {
+      font-weight: 650;
+      font-size: 13px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .row-meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      height: 22px;
+      padding: 0 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 11px;
+      color: var(--muted);
+      background: white;
+    }
+
+    .badge.dirty { color: var(--warn); border-color: #f4c27a; background: #fff7ed; }
+    .badge.bad { color: var(--bad); border-color: #fecdca; background: #fff1f3; }
+    .badge.good { color: var(--good); border-color: #a7f3d0; background: #ecfdf3; }
+
+    main {
+      overflow: auto;
+      min-width: 0;
+      padding: 12px;
+    }
+
+    .empty {
+      height: calc(100vh - 78px);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 24px;
+    }
+
+    .editor {
+      display: grid;
+      gap: 12px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .title-block {
+      min-width: 0;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .title-block div {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 8px;
+      flex: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      min-height: 42px;
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .panel-body {
+      padding: 10px;
+    }
+
+    .text {
+      white-space: pre-wrap;
+      line-height: 1.62;
+      font-size: 14px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 170px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      line-height: 1.55;
+      color: var(--ink);
+      background: white;
+    }
+
+    textarea:focus, input:focus, select:focus {
+      outline: 2px solid rgba(15, 118, 110, 0.22);
+      border-color: var(--accent);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .meta {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 7px 8px;
+      min-width: 0;
+    }
+
+    .meta span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+
+    .meta b {
+      display: block;
+      font-size: 13px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .validation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 920px) {
+      .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 42vh 1fr;
+      }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .toolbar {
+        justify-content: flex-start;
+      }
+
+      aside {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .grid, .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div>
+          <strong>JSONL Translation Editor</strong>
+          <span id="fileName">未加载文件</span>
+        </div>
+      </div>
+      <div class="toolbar">
+        <input id="fileInput" type="file" accept=".jsonl,.json,application/json">
+        <button id="openPicker" title="用浏览器文件选择器打开">📂</button>
+        <button id="saveFile" class="primary" title="保存到已授权文件或下载">💾</button>
+        <button id="downloadFile" title="下载 JSONL">⬇</button>
+      </div>
+    </header>
+
+    <aside>
+      <div class="filters">
+        <div class="search-row">
+          <input id="search" type="search" placeholder="搜索 id / 原文 / 译文">
+          <select id="filter">
+            <option value="all">全部</option>
+            <option value="dirty">已编辑</option>
+            <option value="issue">有问题</option>
+            <option value="EC">EC</option>
+            <option value="CE">CE</option>
+          </select>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="totalCount">0</b><span>总数</span></div>
+        <div class="stat"><b id="visibleCount">0</b><span>显示</span></div>
+        <div class="stat"><b id="dirtyCount">0</b><span>已编辑</span></div>
+        <div class="stat"><b id="issueCount">0</b><span>问题</span></div>
+      </div>
+      <div id="list" class="list"></div>
+    </aside>
+
+    <main>
+      <div id="empty" class="empty">
+        <div>
+          <strong>打开 JSONL 文件后开始编辑</strong>
+          <div class="small">支持逐行 JSON；编辑会实时更新内存中的数据，可随时保存或下载。</div>
+        </div>
+      </div>
+
+      <div id="editor" class="editor hidden">
+        <div class="topline">
+          <div class="title-block">
+            <h1 id="sampleTitle"></h1>
+            <div id="sampleSubtitle"></div>
+          </div>
+          <div class="nav-buttons">
+            <button id="prevBtn" class="icon" title="上一条">←</button>
+            <button id="nextBtn" class="icon" title="下一条">→</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>字段</h2>
+            <div id="validation" class="validation"></div>
+          </div>
+          <div class="panel-body meta-grid" id="metaGrid"></div>
+        </div>
+
+        <div class="grid">
+          <section class="panel">
+            <div class="panel-head"><h2>Source Text</h2><span id="sourceLen" class="small"></span></div>
+            <div class="panel-body text" id="sourceText"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h2>Human Translation</h2><span id="humanLen" class="small"></span></div>
+            <div class="panel-body text" id="humanTranslation"></div>
+          </section>
+        </div>
+
+        <div class="grid">
+          <section class="panel">
+            <div class="panel-head"><h2>Variant 1 Better</h2><span id="v1Len" class="small"></span></div>
+            <div class="panel-body">
+              <textarea id="variant1" spellcheck="false"></textarea>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h2>Variant 2 Slightly Weaker</h2><span id="v2Len" class="small"></span></div>
+            <div class="panel-body">
+              <textarea id="variant2" spellcheck="false"></textarea>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      rows: [],
+      original: new Map(),
+      current: 0,
+      filteredIndexes: [],
+      fileHandle: null,
+      fileName: "",
+    };
+
+    const el = (id) => document.getElementById(id);
+    const fields = ["variant_1_better", "variant_2_slightly_weaker"];
+
+    el("fileInput").addEventListener("change", async (event) => {
+      const file = event.target.files[0];
+      if (file) await loadText(await file.text(), file.name);
+    });
+
+    el("openPicker").addEventListener("click", async () => {
+      if (!window.showOpenFilePicker) {
+        el("fileInput").click();
+        return;
+      }
+      const [handle] = await window.showOpenFilePicker({
+        types: [{ description: "JSONL", accept: { "application/json": [".jsonl", ".json"] } }],
+        multiple: false,
+      });
+      const file = await handle.getFile();
+      state.fileHandle = handle;
+      await loadText(await file.text(), file.name);
+    });
+
+    el("saveFile").addEventListener("click", saveFile);
+    el("downloadFile").addEventListener("click", downloadFile);
+    el("search").addEventListener("input", renderList);
+    el("filter").addEventListener("change", renderList);
+    el("prevBtn").addEventListener("click", () => moveSelection(-1));
+    el("nextBtn").addEventListener("click", () => moveSelection(1));
+
+    el("variant1").addEventListener("input", () => editField("variant_1_better", el("variant1").value));
+    el("variant2").addEventListener("input", () => editField("variant_2_slightly_weaker", el("variant2").value));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.target.tagName === "TEXTAREA" || event.target.tagName === "INPUT") return;
+      if (event.key === "ArrowUp") { event.preventDefault(); moveSelection(-1); }
+      if (event.key === "ArrowDown") { event.preventDefault(); moveSelection(1); }
+    });
+
+    async function loadText(text, name) {
+      const rows = [];
+      const lines = text.split(/\r?\n/);
+      for (let i = 0; i < lines.length; i += 1) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        try {
+          rows.push(JSON.parse(line));
+        } catch (error) {
+          alert(`第 ${i + 1} 行不是合法 JSON: ${error.message}`);
+          return;
+        }
+      }
+      state.rows = rows;
+      state.original = new Map(rows.map((row) => [row.id, JSON.stringify(row)]));
+      state.current = 0;
+      state.fileName = name;
+      el("fileName").textContent = name;
+      el("empty").classList.add("hidden");
+      el("editor").classList.remove("hidden");
+      renderList();
+      selectIndex(0);
+    }
+
+    function editField(field, value) {
+      const row = state.rows[state.current];
+      if (!row) return;
+      row[field] = value;
+      updatePanelMetrics(row);
+      renderStats();
+      updateActiveRow();
+    }
+
+    function rowIssues(row) {
+      const issues = [];
+      for (const field of fields) {
+        if (!row[field] || !String(row[field]).trim()) issues.push(`${field} empty`);
+      }
+      if (row.variant_1_better === row.human_translation) issues.push("v1 equals human");
+      if (row.variant_2_slightly_weaker === row.human_translation) issues.push("v2 equals human");
+      if (row.variant_1_better && row.variant_1_better === row.variant_2_slightly_weaker) issues.push("variants identical");
+      return issues;
+    }
+
+    function isDirty(row) {
+      return state.original.get(row.id) !== JSON.stringify(row);
+    }
+
+    function renderList() {
+      const query = el("search").value.trim().toLowerCase();
+      const filter = el("filter").value;
+      state.filteredIndexes = [];
+      const list = el("list");
+      list.innerHTML = "";
+
+      state.rows.forEach((row, index) => {
+        const haystack = [
+          row.id,
+          row.source_text,
+          row.human_translation,
+          row.variant_1_better,
+          row.variant_2_slightly_weaker,
+          row.domain_subtype,
+        ].join(" ").toLowerCase();
+        const issues = rowIssues(row);
+        if (query && !haystack.includes(query)) return;
+        if (filter === "dirty" && !isDirty(row)) return;
+        if (filter === "issue" && issues.length === 0) return;
+        if ((filter === "EC" || filter === "CE") && row.direction !== filter) return;
+
+        state.filteredIndexes.push(index);
+        const button = document.createElement("button");
+        button.className = "row";
+        button.dataset.index = index;
+        button.innerHTML = `
+          <div>
+            <div class="row-id">${escapeHtml(row.id || `row-${index + 1}`)}</div>
+            <div class="row-meta">${escapeHtml([row.direction, row.domain_subtype, row.difficulty].filter(Boolean).join(" · "))}</div>
+          </div>
+          <span class="badge ${issues.length ? "bad" : isDirty(row) ? "dirty" : "good"}">${issues.length ? "!" : isDirty(row) ? "*" : "✓"}</span>
+        `;
+        button.addEventListener("click", () => selectIndex(index));
+        list.appendChild(button);
+      });
+      renderStats();
+      updateActiveRow();
+    }
+
+    function renderStats() {
+      const dirty = state.rows.filter(isDirty).length;
+      const issues = state.rows.filter((row) => rowIssues(row).length).length;
+      el("totalCount").textContent = state.rows.length;
+      el("visibleCount").textContent = state.filteredIndexes.length;
+      el("dirtyCount").textContent = dirty;
+      el("issueCount").textContent = issues;
+    }
+
+    function selectIndex(index) {
+      if (!state.rows[index]) return;
+      state.current = index;
+      const row = state.rows[index];
+      el("sampleTitle").textContent = row.id || `row-${index + 1}`;
+      el("sampleSubtitle").textContent = [row.direction, row.source_lang, "→", row.target_lang, row.domain_subtype].filter(Boolean).join(" ");
+      el("sourceText").textContent = row.source_text || "";
+      el("humanTranslation").textContent = row.human_translation || "";
+      el("variant1").value = row.variant_1_better || "";
+      el("variant2").value = row.variant_2_slightly_weaker || "";
+
+      const meta = [
+        ["direction", row.direction],
+        ["source_lang", row.source_lang],
+        ["target_lang", row.target_lang],
+        ["difficulty", row.difficulty],
+        ["domain_subtype", row.domain_subtype],
+        ["finance_score", row.finance_score],
+        ["source_sheet", row.source_sheet],
+        ["source_row", row.source_row],
+      ];
+      el("metaGrid").innerHTML = meta.map(([key, value]) => `
+        <div class="meta"><span>${escapeHtml(key)}</span><b title="${escapeHtml(String(value ?? ""))}">${escapeHtml(String(value ?? ""))}</b></div>
+      `).join("");
+      updatePanelMetrics(row);
+      updateActiveRow();
+    }
+
+    function updatePanelMetrics(row) {
+      el("sourceLen").textContent = `${String(row.source_text || "").length} chars`;
+      el("humanLen").textContent = `${String(row.human_translation || "").length} chars`;
+      el("v1Len").textContent = `${String(row.variant_1_better || "").length} chars`;
+      el("v2Len").textContent = `${String(row.variant_2_slightly_weaker || "").length} chars`;
+
+      const issues = rowIssues(row);
+      const chips = [];
+      chips.push(`<span class="badge ${isDirty(row) ? "dirty" : "good"}">${isDirty(row) ? "edited" : "saved"}</span>`);
+      if (issues.length) {
+        for (const issue of issues) chips.push(`<span class="badge bad">${escapeHtml(issue)}</span>`);
+      } else {
+        chips.push('<span class="badge good">valid</span>');
+      }
+      el("validation").innerHTML = chips.join("");
+    }
+
+    function updateActiveRow() {
+      document.querySelectorAll(".row").forEach((node) => {
+        node.classList.toggle("active", Number(node.dataset.index) === state.current);
+        if (Number(node.dataset.index) === state.current) {
+          const row = state.rows[state.current];
+          const badge = node.querySelector(".badge");
+          const issues = rowIssues(row);
+          badge.className = `badge ${issues.length ? "bad" : isDirty(row) ? "dirty" : "good"}`;
+          badge.textContent = issues.length ? "!" : isDirty(row) ? "*" : "✓";
+        }
+      });
+    }
+
+    function moveSelection(delta) {
+      if (!state.filteredIndexes.length) return;
+      const pos = state.filteredIndexes.indexOf(state.current);
+      const nextPos = Math.max(0, Math.min(state.filteredIndexes.length - 1, (pos === -1 ? 0 : pos) + delta));
+      selectIndex(state.filteredIndexes[nextPos]);
+    }
+
+    function toJsonl() {
+      return state.rows.map((row) => JSON.stringify(row)).join("\n") + "\n";
+    }
+
+    async function saveFile() {
+      const text = toJsonl();
+      if (state.fileHandle && window.showSaveFilePicker) {
+        const writable = await state.fileHandle.createWritable();
+        await writable.write(text);
+        await writable.close();
+        state.original = new Map(state.rows.map((row) => [row.id, JSON.stringify(row)]));
+        renderList();
+        selectIndex(state.current);
+        return;
+      }
+      downloadFile();
+    }
+
+    function downloadFile() {
+      const blob = new Blob([toJsonl()], { type: "application/x-ndjson;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = state.fileName || "edited.jsonl";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
+  </script>
+</body>
+</html>
