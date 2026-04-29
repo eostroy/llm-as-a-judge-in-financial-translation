@@ -2,10 +2,10 @@
 """Generate two extra translation candidates for each row in an FFN JSONL file.
 
 Default input:
-  ffn_finance_200ec.jsonl
+  ffn_200ec.jsonl
 
 Default output:
-  ffn_finance_200ec.with_variants.jsonl
+  ffn_200ec.with_variants.jsonl
 """
 
 from __future__ import annotations
@@ -245,8 +245,8 @@ def call_with_retries(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=Path, default=Path("ffn_finance_200ec.jsonl"))
-    parser.add_argument("--output", type=Path, default=Path("ffn_finance_200ec.with_variants.jsonl"))
+    parser.add_argument("--input", type=Path, default=Path("ffn_200ec.jsonl"))
+    parser.add_argument("--output", type=Path, default=Path("ffn_200ec.with_variants.jsonl"))
     parser.add_argument("--errors", type=Path, default=Path("generation_errors.jsonl"))
     parser.add_argument("--base-url", default=os.getenv("MOONSHOT_BASE_URL", BASE_URL))
     parser.add_argument("--model", default=os.getenv("MOONSHOT_MODEL", MODEL))

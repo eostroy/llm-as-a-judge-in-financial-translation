@@ -1,18 +1,24 @@
-请在这里填写你的排序提示词。
+You are evaluating financial translation quality. Given a source text and three candidate translations, choose the best translation.
 
-脚本会在这段提示词后面自动附加一个 JSON 样本，其中包含：
+The script will append a JSON sample containing:
 - source_text
-- human_translation
-- variant_1_better
-- variant_2_slightly_weaker
+- candidate_A
+- candidate_B
+- candidate_C
 
-请要求模型只返回 JSON，格式建议如下：
+Return JSON only, using this format:
 {
-  "ranking": ["variant_1_better", "human_translation", "variant_2_slightly_weaker"],
-  "reason": "简要说明排序依据"
+  "rank": {
+    "A": 2,
+    "B": 1,
+    "C": 3
+  },
+  "reason": "Briefly explain the ranking."
 }
 
-ranking 必须且只能包含以下三个候选字段名：
-- human_translation
-- variant_1_better
-- variant_2_slightly_weaker
+The rank object must map each candidate letter to its placement:
+- 1 means best
+- 2 means second best
+- 3 means worst
+
+The rank object must contain exactly A, B, and C.

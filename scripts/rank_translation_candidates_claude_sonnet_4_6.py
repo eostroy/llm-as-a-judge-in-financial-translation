@@ -24,7 +24,7 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_INPUT = Path("ffn_200ec.with_candidates.jsonl")
 DEFAULT_PROMPT = Path("prompts/rank_candidates_prompt.txt")
 DEFAULT_OUTPUT_DIR = Path("openrouter_rankings")
-DEFAULT_MODELS = "openai/gpt-5.5"
+DEFAULT_MODELS = "anthropic/claude-sonnet-4.6"
 CANDIDATE_FIELDS = ["candidate_A", "candidate_B", "candidate_C"]
 RESULT_FIELD = "rank"
 

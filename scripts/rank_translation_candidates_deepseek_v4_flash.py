@@ -24,7 +24,7 @@ OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_INPUT = Path("ffn_200ec.with_candidates.jsonl")
 DEFAULT_PROMPT = Path("prompts/rank_candidates_prompt.txt")
 DEFAULT_OUTPUT_DIR = Path("openrouter_rankings")
-DEFAULT_MODELS = "openai/gpt-5.5"
+DEFAULT_MODELS = "deepseek/deepseek-v4-flash"
 CANDIDATE_FIELDS = ["candidate_A", "candidate_B", "candidate_C"]
 RESULT_FIELD = "rank"
 
@@ -226,7 +226,7 @@ def call_with_retries(
             last_error = exc
 
         if attempt < retries:
-            wait_s = min(2**attempt, 20)
+            wait_s = min(30 * attempt, 180) if "429" in str(last_error) else min(2**attempt, 20)
             print(f"  attempt {attempt} failed: {last_error}; retrying in {wait_s}s")
             time.sleep(wait_s)
     raise RuntimeError(f"failed after {retries} attempts: {last_error}")
@@ -241,7 +241,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--api-key", default=None)
     parser.add_argument("--base-url", default=os.getenv("OPENROUTER_BASE_URL", OPENROUTER_BASE_URL))
     parser.add_argument("--timeout", type=int, default=120)
-    parser.add_argument("--retries", type=int, default=3)
+    parser.add_argument("--retries", type=int, default=20)
     parser.add_argument("--max-tokens", type=int, default=1200)
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--limit", type=int, default=None)
