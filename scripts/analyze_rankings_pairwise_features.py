@@ -5,11 +5,13 @@ This script intentionally ignores GPT-5.5 and the live DeepSeek run. It uses
 the four completed shuffled-position model outputs and writes derived analysis
 files without modifying the source dataset or ranking outputs.
 
-The current analysis run skips pairwise logistic regression by request.
+Pairwise logistic regression is optional and uses only the local proxy features
+defined in this file. It does not call embedding services.
 """
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import math
@@ -458,6 +460,10 @@ def disagreement_rows(
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--include-logistic", action="store_true")
+    args = parser.parse_args()
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     dataset_rows = read_jsonl(DATASET)
     dataset_by_id = {str(row["id"]): row for row in dataset_rows}
@@ -498,6 +504,21 @@ def main() -> int:
         ["model", "n", "top_A", "top_B", "top_C"] + [f"avg_{key}" for key in FEATURE_KEYS],
     )
 
+    if args.include_logistic:
+        logistic_rows = logistic_preference_rows(rankings, features_by_id)
+        write_csv(
+            OUT_DIR / "ffn_200ec.four_models.pairwise_logistic_feature_preferences.csv",
+            logistic_rows,
+            [
+                "model",
+                "feature",
+                "standardized_coefficient",
+                "training_accuracy",
+                "intercept",
+                "n_pairwise_observations",
+            ],
+        )
+
     high_disagreement = disagreement_rows(dataset_by_id, rankings)
     write_jsonl(OUT_DIR / "ffn_200ec.four_models.high_disagreement_samples.jsonl", high_disagreement)
     write_csv(
@@ -527,6 +548,8 @@ def main() -> int:
     print(f"pairwise judgments: {len(pairwise_rows)}")
     print(f"enriched dataset rows: {len(enriched)}")
     print(f"high disagreement samples: {len(high_disagreement)}")
+    if args.include_logistic:
+        print(f"logistic rows: {len(logistic_rows)}")
     return 0
 
 
