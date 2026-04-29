@@ -256,6 +256,10 @@ def top_candidate(rank: dict[str, int]) -> str:
     return min(CANDIDATES, key=lambda letter: int(rank[letter]))
 
 
+def ranking_order(rank: dict[str, int]) -> list[str]:
+    return sorted(CANDIDATES, key=lambda letter: int(rank[letter]))
+
+
 def load_rankings() -> dict[str, dict[str, dict[str, int]]]:
     rankings: dict[str, dict[str, dict[str, int]]] = {}
     for model, path in MODEL_FILES.items():
@@ -459,6 +463,229 @@ def disagreement_rows(
     return rows
 
 
+def entropy(counter: Counter[str], total: int) -> float:
+    if total == 0:
+        return 0.0
+    value = 0.0
+    for count in counter.values():
+        if count:
+            probability = count / total
+            value -= probability * math.log2(probability)
+    return value
+
+
+def consensus_rows(rankings: dict[str, dict[str, dict[str, int]]]) -> list[dict[str, Any]]:
+    model_names = sorted(rankings)
+    common_ids = sorted(set.intersection(*(set(rankings[model]) for model in model_names)))
+    rows = []
+    for sample_id in common_ids:
+        rank_sums = {
+            letter: sum(rankings[model][sample_id][letter] for model in model_names)
+            for letter in CANDIDATES
+        }
+        borda_points = {letter: 3 * len(model_names) - rank_sums[letter] for letter in CANDIDATES}
+        consensus_order = sorted(CANDIDATES, key=lambda letter: (rank_sums[letter], letter))
+        consensus_rank = {letter: index for index, letter in enumerate(consensus_order, start=1)}
+        top_votes = Counter(top_candidate(rankings[model][sample_id]) for model in model_names)
+        rows.append(
+            {
+                "id": sample_id,
+                "consensus_order": ">".join(consensus_order),
+                "consensus_rank": consensus_rank,
+                "rank_sum_A": rank_sums["A"],
+                "rank_sum_B": rank_sums["B"],
+                "rank_sum_C": rank_sums["C"],
+                "borda_A": borda_points["A"],
+                "borda_B": borda_points["B"],
+                "borda_C": borda_points["C"],
+                "top1_votes": dict(top_votes),
+            }
+        )
+    return rows
+
+
+def model_consensus_agreement_rows(
+    rankings: dict[str, dict[str, dict[str, int]]],
+    consensus: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    consensus_by_id = {row["id"]: row["consensus_rank"] for row in consensus}
+    rows = []
+    for model, model_rows in sorted(rankings.items()):
+        pairwise_same = 0
+        pairwise_total = 0
+        top1_same = 0
+        exact_rank_same = 0
+        for sample_id, rank in model_rows.items():
+            consensus_rank = consensus_by_id[sample_id]
+            if top_candidate(rank) == top_candidate(consensus_rank):
+                top1_same += 1
+            if rank == consensus_rank:
+                exact_rank_same += 1
+            for a, b in PAIRS:
+                pairwise_total += 1
+                if winner_from_rank(rank, a, b) == winner_from_rank(consensus_rank, a, b):
+                    pairwise_same += 1
+        rows.append(
+            {
+                "model": model,
+                "samples": len(model_rows),
+                "top1_matches_consensus": top1_same,
+                "top1_agreement": round(top1_same / len(model_rows), 6),
+                "exact_rank_matches_consensus": exact_rank_same,
+                "exact_rank_agreement": round(exact_rank_same / len(model_rows), 6),
+                "pairwise_matches_consensus": pairwise_same,
+                "pairwise_total": pairwise_total,
+                "pairwise_agreement": round(pairwise_same / pairwise_total, 6),
+            }
+        )
+    return rows
+
+
+def entropy_rows(rankings: dict[str, dict[str, dict[str, int]]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    model_names = sorted(rankings)
+    common_ids = sorted(set.intersection(*(set(rankings[model]) for model in model_names)))
+    rows = []
+    for sample_id in common_ids:
+        votes = Counter(top_candidate(rankings[model][sample_id]) for model in model_names)
+        top1_entropy = entropy(votes, len(model_names))
+        if top1_entropy == 0:
+            layer = "unanimous"
+        elif top1_entropy <= 1.0:
+            layer = "medium"
+        else:
+            layer = "high"
+        rows.append(
+            {
+                "id": sample_id,
+                "top1_entropy": round(top1_entropy, 6),
+                "disagreement_layer": layer,
+                "top1_votes": dict(votes),
+            }
+        )
+    summary = []
+    for layer, layer_rows in sorted(defaultdict(list, {layer: [row for row in rows if row["disagreement_layer"] == layer] for layer in {row["disagreement_layer"] for row in rows}}).items()):
+        if not layer_rows:
+            continue
+        summary.append(
+            {
+                "disagreement_layer": layer,
+                "samples": len(layer_rows),
+                "avg_top1_entropy": round(sum(row["top1_entropy"] for row in layer_rows) / len(layer_rows), 6),
+            }
+        )
+    rows.sort(key=lambda item: (-item["top1_entropy"], item["id"]))
+    return rows, summary
+
+
+def condorcet_rows(rankings: dict[str, dict[str, dict[str, int]]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    model_names = sorted(rankings)
+    common_ids = sorted(set.intersection(*(set(rankings[model]) for model in model_names)))
+    rows = []
+    winner_counts = Counter()
+    loser_counts = Counter()
+    for sample_id in common_ids:
+        pair_wins = {letter: 0 for letter in CANDIDATES}
+        pair_losses = {letter: 0 for letter in CANDIDATES}
+        pair_vote_detail = {}
+        for a, b in PAIRS:
+            votes = Counter(winner_from_rank(rankings[model][sample_id], a, b) for model in model_names)
+            if votes[a] > votes[b]:
+                pair_wins[a] += 1
+                pair_losses[b] += 1
+                pair_winner = a
+            elif votes[b] > votes[a]:
+                pair_wins[b] += 1
+                pair_losses[a] += 1
+                pair_winner = b
+            else:
+                pair_winner = "tie"
+            pair_vote_detail[f"{a}-{b}"] = {"votes": dict(votes), "winner": pair_winner}
+        condorcet_winners = [letter for letter, wins in pair_wins.items() if wins == 2]
+        condorcet_losers = [letter for letter, losses in pair_losses.items() if losses == 2]
+        winner = condorcet_winners[0] if len(condorcet_winners) == 1 else ""
+        loser = condorcet_losers[0] if len(condorcet_losers) == 1 else ""
+        if winner:
+            winner_counts[winner] += 1
+        if loser:
+            loser_counts[loser] += 1
+        rows.append(
+            {
+                "id": sample_id,
+                "condorcet_winner": winner,
+                "condorcet_loser": loser,
+                "has_condorcet_winner": bool(winner),
+                "has_condorcet_loser": bool(loser),
+                "pair_wins": pair_wins,
+                "pair_losses": pair_losses,
+                "pair_vote_detail": pair_vote_detail,
+            }
+        )
+    summary = [
+        {
+            "metric": "condorcet_winner",
+            "A": winner_counts["A"],
+            "B": winner_counts["B"],
+            "C": winner_counts["C"],
+            "none": sum(1 for row in rows if not row["condorcet_winner"]),
+        },
+        {
+            "metric": "condorcet_loser",
+            "A": loser_counts["A"],
+            "B": loser_counts["B"],
+            "C": loser_counts["C"],
+            "none": sum(1 for row in rows if not row["condorcet_loser"]),
+        },
+    ]
+    return rows, summary
+
+
+def minority_model_rows(rankings: dict[str, dict[str, dict[str, int]]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    model_names = sorted(rankings)
+    common_ids = sorted(set.intersection(*(set(rankings[model]) for model in model_names)))
+    event_rows = []
+    model_summary: dict[str, Counter[str]] = {model: Counter() for model in model_names}
+    for sample_id in common_ids:
+        top_votes = Counter(top_candidate(rankings[model][sample_id]) for model in model_names)
+        max_top_votes = max(top_votes.values())
+        majority_top = {candidate for candidate, count in top_votes.items() if count == max_top_votes and count > 1}
+        pattern_votes = Counter(
+            ">".join(ranking_order(rankings[model][sample_id])) for model in model_names
+        )
+        for model in model_names:
+            top = top_candidate(rankings[model][sample_id])
+            pattern = ">".join(ranking_order(rankings[model][sample_id]))
+            is_top1_minority = bool(majority_top) and top not in majority_top
+            is_unique_full_ranking = pattern_votes[pattern] == 1
+            if is_top1_minority or is_unique_full_ranking:
+                model_summary[model]["minority_events"] += 1
+                model_summary[model]["top1_minority_events"] += int(is_top1_minority)
+                model_summary[model]["unique_full_ranking_events"] += int(is_unique_full_ranking)
+                event_rows.append(
+                    {
+                        "id": sample_id,
+                        "model": model,
+                        "top1": top,
+                        "ranking": pattern,
+                        "top1_votes": dict(top_votes),
+                        "ranking_votes": dict(pattern_votes),
+                        "is_top1_minority": is_top1_minority,
+                        "is_unique_full_ranking": is_unique_full_ranking,
+                    }
+                )
+    summary_rows = [
+        {
+            "model": model,
+            "minority_events": counts["minority_events"],
+            "top1_minority_events": counts["top1_minority_events"],
+            "unique_full_ranking_events": counts["unique_full_ranking_events"],
+            "samples": len(common_ids),
+        }
+        for model, counts in sorted(model_summary.items())
+    ]
+    event_rows.sort(key=lambda item: (item["id"], item["model"]))
+    return event_rows, summary_rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--include-logistic", action="store_true")
@@ -519,6 +746,92 @@ def main() -> int:
             ],
         )
 
+    consensus = consensus_rows(rankings)
+    write_jsonl(OUT_DIR / "ffn_200ec.four_models.consensus_borda.jsonl", consensus)
+    write_csv(
+        OUT_DIR / "ffn_200ec.four_models.consensus_borda_summary.csv",
+        [
+            {
+                "id": row["id"],
+                "consensus_order": row["consensus_order"],
+                "consensus_rank": json.dumps(row["consensus_rank"], ensure_ascii=False, sort_keys=True),
+                "rank_sum_A": row["rank_sum_A"],
+                "rank_sum_B": row["rank_sum_B"],
+                "rank_sum_C": row["rank_sum_C"],
+                "borda_A": row["borda_A"],
+                "borda_B": row["borda_B"],
+                "borda_C": row["borda_C"],
+                "top1_votes": json.dumps(row["top1_votes"], ensure_ascii=False, sort_keys=True),
+            }
+            for row in consensus
+        ],
+        [
+            "id",
+            "consensus_order",
+            "consensus_rank",
+            "rank_sum_A",
+            "rank_sum_B",
+            "rank_sum_C",
+            "borda_A",
+            "borda_B",
+            "borda_C",
+            "top1_votes",
+        ],
+    )
+
+    model_consensus_rows = model_consensus_agreement_rows(rankings, consensus)
+    write_csv(
+        OUT_DIR / "ffn_200ec.four_models.model_vs_consensus_agreement.csv",
+        model_consensus_rows,
+        [
+            "model",
+            "samples",
+            "top1_matches_consensus",
+            "top1_agreement",
+            "exact_rank_matches_consensus",
+            "exact_rank_agreement",
+            "pairwise_matches_consensus",
+            "pairwise_total",
+            "pairwise_agreement",
+        ],
+    )
+
+    top1_entropy_rows, top1_entropy_summary = entropy_rows(rankings)
+    write_csv(
+        OUT_DIR / "ffn_200ec.four_models.top1_entropy_layers.csv",
+        [
+            {
+                "id": row["id"],
+                "top1_entropy": row["top1_entropy"],
+                "disagreement_layer": row["disagreement_layer"],
+                "top1_votes": json.dumps(row["top1_votes"], ensure_ascii=False, sort_keys=True),
+            }
+            for row in top1_entropy_rows
+        ],
+        ["id", "top1_entropy", "disagreement_layer", "top1_votes"],
+    )
+    write_csv(
+        OUT_DIR / "ffn_200ec.four_models.top1_entropy_layer_summary.csv",
+        top1_entropy_summary,
+        ["disagreement_layer", "samples", "avg_top1_entropy"],
+    )
+
+    condorcet_detail, condorcet_summary = condorcet_rows(rankings)
+    write_jsonl(OUT_DIR / "ffn_200ec.four_models.condorcet_detail.jsonl", condorcet_detail)
+    write_csv(
+        OUT_DIR / "ffn_200ec.four_models.condorcet_summary.csv",
+        condorcet_summary,
+        ["metric", "A", "B", "C", "none"],
+    )
+
+    minority_events, minority_summary = minority_model_rows(rankings)
+    write_jsonl(OUT_DIR / "ffn_200ec.four_models.minority_model_events.jsonl", minority_events)
+    write_csv(
+        OUT_DIR / "ffn_200ec.four_models.minority_model_summary.csv",
+        minority_summary,
+        ["model", "minority_events", "top1_minority_events", "unique_full_ranking_events", "samples"],
+    )
+
     high_disagreement = disagreement_rows(dataset_by_id, rankings)
     write_jsonl(OUT_DIR / "ffn_200ec.four_models.high_disagreement_samples.jsonl", high_disagreement)
     write_csv(
@@ -548,6 +861,8 @@ def main() -> int:
     print(f"pairwise judgments: {len(pairwise_rows)}")
     print(f"enriched dataset rows: {len(enriched)}")
     print(f"high disagreement samples: {len(high_disagreement)}")
+    print(f"consensus rows: {len(consensus)}")
+    print(f"minority events: {len(minority_events)}")
     if args.include_logistic:
         print(f"logistic rows: {len(logistic_rows)}")
     return 0
