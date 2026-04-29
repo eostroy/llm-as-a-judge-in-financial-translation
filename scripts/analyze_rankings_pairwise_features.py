@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 """Analyze completed translation-ranking outputs.
 
-This script intentionally ignores the live DeepSeek run. It uses the four
-completed model outputs and writes derived analysis files without modifying the
-source dataset or ranking outputs.
+This script intentionally ignores GPT-5.5 and the live DeepSeek run. It uses
+the four completed shuffled-position model outputs and writes derived analysis
+files without modifying the source dataset or ranking outputs.
+
+The current analysis run skips pairwise logistic regression by request.
 """
 
 from __future__ import annotations
@@ -18,18 +20,18 @@ from pathlib import Path
 from typing import Any
 
 
-DATASET = Path("ffn_200ec.with_candidates.jsonl")
+DATASET = Path("ffn_200ec.with_candidates.shuffled.jsonl")
 OUT_DIR = Path("analysis_outputs")
 MODEL_FILES = {
-    "openai__gpt-5.5": Path("openrouter_rankings/ffn_200ec.with_candidates.ranked.openai__gpt-5.5.jsonl"),
+    "openai__gpt-5.2": Path("openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.jsonl"),
     "google__gemini-3-flash-preview": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.ranked.google__gemini-3-flash-preview.jsonl"
+        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.jsonl"
     ),
     "anthropic__claude-sonnet-4.6": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.ranked.anthropic__claude-sonnet-4.6.jsonl"
+        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.jsonl"
     ),
     "moonshotai__kimi-k2.5": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.ranked.moonshotai__kimi-k2.5.jsonl"
+        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.jsonl"
     ),
 }
 CANDIDATES = ("A", "B", "C")
@@ -494,20 +496,6 @@ def main() -> int:
         OUT_DIR / "ffn_200ec.four_models.top1_average_features.csv",
         top1_rows,
         ["model", "n", "top_A", "top_B", "top_C"] + [f"avg_{key}" for key in FEATURE_KEYS],
-    )
-
-    logistic_rows = logistic_preference_rows(rankings, features_by_id)
-    write_csv(
-        OUT_DIR / "ffn_200ec.four_models.pairwise_logistic_feature_preferences.csv",
-        logistic_rows,
-        [
-            "model",
-            "feature",
-            "standardized_coefficient",
-            "training_accuracy",
-            "intercept",
-            "n_pairwise_observations",
-        ],
     )
 
     high_disagreement = disagreement_rows(dataset_by_id, rankings)

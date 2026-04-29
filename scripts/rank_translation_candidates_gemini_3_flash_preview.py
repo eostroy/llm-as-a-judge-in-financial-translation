@@ -21,7 +21,7 @@ from typing import Any
 
 OPENROUTER_API_KEY = "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"  # Optional: paste your OpenRouter API key here.
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-DEFAULT_INPUT = Path("ffn_200ec.with_candidates.jsonl")
+DEFAULT_INPUT = Path("ffn_200ec.with_candidates.shuffled.jsonl")
 DEFAULT_PROMPT = Path("prompts/rank_candidates_prompt.txt")
 DEFAULT_OUTPUT_DIR = Path("openrouter_rankings")
 DEFAULT_MODELS = "google/gemini-3-flash-preview"
