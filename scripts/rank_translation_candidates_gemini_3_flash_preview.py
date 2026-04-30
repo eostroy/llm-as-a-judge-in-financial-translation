@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Rank three translation candidates with one or more OpenRouter models.
 
-The source JSONL is never modified. Each model writes to its own output JSONL.
+The source JSON is never modified. Each model writes to its own output JSON.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ from typing import Any
 
 OPENROUTER_API_KEY = "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"  # Optional: paste your OpenRouter API key here.
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-DEFAULT_INPUT = Path("ffn_200ec.with_candidates.shuffled.jsonl")
+DEFAULT_INPUT = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
 DEFAULT_PROMPT = Path("prompts/rank_candidates_prompt.txt")
 DEFAULT_OUTPUT_DIR = Path("openrouter_rankings")
 DEFAULT_MODELS = "google/gemini-3-flash-preview"
@@ -33,30 +33,41 @@ def now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def read_jsonl(path: Path) -> list[dict[str, Any]]:
+def read_json(path: Path) -> list[dict[str, Any]]:
+    if not path.exists() or path.stat().st_size == 0:
+        return []
+    text = path.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return []
+    if text.startswith("["):
+        data = json.loads(text)
+        if not isinstance(data, list):
+            raise ValueError(f"{path} must contain a JSON array")
+        return data
+
     rows: list[dict[str, Any]] = []
-    with path.open("r", encoding="utf-8-sig") as f:
-        for line_no, line in enumerate(f, start=1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rows.append(json.loads(line))
-            except json.JSONDecodeError as exc:
-                raise ValueError(f"{path}:{line_no} is not valid JSON: {exc}") from exc
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rows.append(json.loads(line))
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"{path}:{line_no} is not valid JSON: {exc}") from exc
     return rows
 
 
-def append_jsonl(path: Path, row: dict[str, Any]) -> None:
+def append_json(path: Path, row: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8", newline="\n") as f:
-        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    rows = read_json(path)
+    rows.append(row)
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def done_ids(path: Path) -> set[str]:
     if not path.exists():
         return set()
-    return {str(row.get("id")) for row in read_jsonl(path) if row.get("id")}
+    return {str(row.get("id")) for row in read_json(path) if row.get("id")}
 
 
 def safe_model_name(model: str) -> str:
@@ -64,7 +75,7 @@ def safe_model_name(model: str) -> str:
 
 
 def default_output_path(input_path: Path, output_dir: Path, model: str) -> Path:
-    return output_dir / f"{input_path.stem}.ranked.{safe_model_name(model)}.jsonl"
+    return output_dir / f"{input_path.stem}.ranked.{safe_model_name(model)}.json"
 
 
 def build_prompt(template: str, row: dict[str, Any]) -> str:
@@ -125,7 +136,7 @@ def normalize_ranking(result: dict[str, Any]) -> dict[str, Any]:
         return rank
 
     if isinstance(ranking, str):
-        ranking = [part.strip() for part in re.split(r"[,>，\s]+", ranking) if part.strip()]
+        ranking = [part.strip() for part in re.split(r"[,>锛孿s]+", ranking) if part.strip()]
     if not isinstance(ranking, list):
         raise ValueError(f"missing ranking list in result: {result}")
 
@@ -259,7 +270,7 @@ def main() -> int:
         print("No OpenRouter API key provided.")
         return 2
 
-    rows = read_jsonl(args.input)
+    rows = read_json(args.input)
     if args.limit is not None:
         rows = rows[: args.limit]
 
@@ -270,7 +281,7 @@ def main() -> int:
 
     for model in models:
         output_path = default_output_path(args.input, args.output_dir, model)
-        error_path = output_path.with_suffix(".errors.jsonl")
+        error_path = output_path.with_suffix(".errors.json")
         if args.restart:
             for path in [output_path, error_path]:
                 if path.exists():
@@ -292,7 +303,7 @@ def main() -> int:
             missing = [field for field in CANDIDATE_FIELDS if field not in row]
             if missing:
                 failed += 1
-                append_jsonl(error_path, {"id": sample_id, "error": f"missing candidate fields: {missing}", "timestamp": now()})
+                append_json(error_path, {"id": sample_id, "error": f"missing candidate fields: {missing}", "timestamp": now()})
                 continue
 
             print(f"[{index}/{len(rows)}] {sample_id}")
@@ -308,7 +319,7 @@ def main() -> int:
                     retries=args.retries,
                     use_response_format=not args.no_response_format,
                 )
-                append_jsonl(
+                append_json(
                     output_path,
                     {
                         **row,
@@ -319,7 +330,7 @@ def main() -> int:
                 ok += 1
             except Exception as exc:  # noqa: BLE001 - batch should continue.
                 failed += 1
-                append_jsonl(error_path, {"id": sample_id, "error": str(exc), "timestamp": now()})
+                append_json(error_path, {"id": sample_id, "error": str(exc), "timestamp": now()})
                 print(f"  failed: {exc}")
 
         print(f"done for {model}: ok={ok}, skipped={skipped}, failed={failed}")

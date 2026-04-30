@@ -1,0 +1,9 @@
+[
+  {
+    "parser": "stanza zh-hans tokenize,pos,lemma,depparse",
+    "clause_count": "max of dependency clause heads, punctuation clauses, and parser sentence count",
+    "dependency_depth": "maximum root-to-token dependency depth across parsed sentences",
+    "nominalization_ratio": "NOUN/PROPN/PRON plus nominal suffix and 的/之 proxy per content token",
+    "sentence_compression_ratio": "Chinese character count divided by English source word count"
+  }
+]

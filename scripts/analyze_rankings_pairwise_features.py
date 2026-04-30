@@ -22,18 +22,18 @@ from pathlib import Path
 from typing import Any
 
 
-DATASET = Path("ffn_200ec.with_candidates.shuffled.jsonl")
+DATASET = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
 OUT_DIR = Path("analysis_outputs")
 MODEL_FILES = {
-    "openai__gpt-5.2": Path("openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.jsonl"),
+    "openai__gpt-5.2": Path("openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
     "google__gemini-3-flash-preview": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.jsonl"
+        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
     ),
     "anthropic__claude-sonnet-4.6": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.jsonl"
+        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
     ),
     "moonshotai__kimi-k2.5": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.jsonl"
+        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
     ),
 }
 CANDIDATES = ("A", "B", "C")
@@ -116,25 +116,30 @@ ENTITY_GLOSSARY: dict[str, list[str]] = {
 }
 
 
-def read_jsonl(path: Path) -> list[dict[str, Any]]:
+def read_json(path: Path) -> list[dict[str, Any]]:
+    text = path.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return []
+    if text.startswith("["):
+        data = json.loads(text)
+        if not isinstance(data, list):
+            raise ValueError(f"{path}: expected a JSON array")
+        return data
     rows: list[dict[str, Any]] = []
-    with path.open("r", encoding="utf-8-sig") as f:
-        for line_no, line in enumerate(f, start=1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rows.append(json.loads(line))
-            except json.JSONDecodeError as exc:
-                raise ValueError(f"{path}:{line_no}: invalid JSON: {exc}") from exc
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rows.append(json.loads(line))
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"{path}:{line_no}: invalid JSON: {exc}") from exc
     return rows
 
 
-def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
+def write_json(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="\n") as f:
-        for row in rows:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
@@ -264,7 +269,7 @@ def load_rankings() -> dict[str, dict[str, dict[str, int]]]:
     rankings: dict[str, dict[str, dict[str, int]]] = {}
     for model, path in MODEL_FILES.items():
         model_rows = {}
-        for row in read_jsonl(path):
+        for row in read_json(path):
             rank = {letter: int(value) for letter, value in row["rank"].items()}
             if sorted(rank) != list(CANDIDATES) or sorted(rank.values()) != [1, 2, 3]:
                 raise ValueError(f"{path}: bad rank for id={row.get('id')}: {rank}")
@@ -692,7 +697,7 @@ def main() -> int:
     args = parser.parse_args()
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    dataset_rows = read_jsonl(DATASET)
+    dataset_rows = read_json(DATASET)
     dataset_by_id = {str(row["id"]): row for row in dataset_rows}
     rankings = load_rankings()
 
@@ -705,7 +710,7 @@ def main() -> int:
         raise ValueError(f"completed model outputs are missing ids: {bad}")
 
     pairwise_rows = build_pairwise(rankings)
-    write_jsonl(OUT_DIR / "ffn_200ec.four_models.pairwise_judgments.jsonl", pairwise_rows)
+    write_json(OUT_DIR / "ffn_200ec.four_models.pairwise_judgments.json", pairwise_rows)
 
     agreement_rows = pairwise_agreement(pairwise_rows)
     write_csv(
@@ -722,7 +727,7 @@ def main() -> int:
     )
 
     enriched, features_by_id = enriched_dataset(dataset_rows)
-    write_jsonl(OUT_DIR / "ffn_200ec.with_candidates.features.jsonl", enriched)
+    write_json(OUT_DIR / "ffn_200ec.with_candidates.features.json", enriched)
 
     top1_rows = average_feature_rows(rankings, features_by_id)
     write_csv(
@@ -747,7 +752,7 @@ def main() -> int:
         )
 
     consensus = consensus_rows(rankings)
-    write_jsonl(OUT_DIR / "ffn_200ec.four_models.consensus_borda.jsonl", consensus)
+    write_json(OUT_DIR / "ffn_200ec.four_models.consensus_borda.json", consensus)
     write_csv(
         OUT_DIR / "ffn_200ec.four_models.consensus_borda_summary.csv",
         [
@@ -817,7 +822,7 @@ def main() -> int:
     )
 
     condorcet_detail, condorcet_summary = condorcet_rows(rankings)
-    write_jsonl(OUT_DIR / "ffn_200ec.four_models.condorcet_detail.jsonl", condorcet_detail)
+    write_json(OUT_DIR / "ffn_200ec.four_models.condorcet_detail.json", condorcet_detail)
     write_csv(
         OUT_DIR / "ffn_200ec.four_models.condorcet_summary.csv",
         condorcet_summary,
@@ -825,7 +830,7 @@ def main() -> int:
     )
 
     minority_events, minority_summary = minority_model_rows(rankings)
-    write_jsonl(OUT_DIR / "ffn_200ec.four_models.minority_model_events.jsonl", minority_events)
+    write_json(OUT_DIR / "ffn_200ec.four_models.minority_model_events.json", minority_events)
     write_csv(
         OUT_DIR / "ffn_200ec.four_models.minority_model_summary.csv",
         minority_summary,
@@ -833,7 +838,7 @@ def main() -> int:
     )
 
     high_disagreement = disagreement_rows(dataset_by_id, rankings)
-    write_jsonl(OUT_DIR / "ffn_200ec.four_models.high_disagreement_samples.jsonl", high_disagreement)
+    write_json(OUT_DIR / "ffn_200ec.four_models.high_disagreement_samples.json", high_disagreement)
     write_csv(
         OUT_DIR / "ffn_200ec.four_models.high_disagreement_summary.csv",
         [

@@ -11,16 +11,18 @@ from pathlib import Path
 from typing import Any
 
 
-def read_jsonl(path: Path) -> list[dict[str, Any]]:
+def read_json(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
-    rows = []
-    with path.open("r", encoding="utf-8-sig") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
-    return rows
+    text = path.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return []
+    if text.startswith("["):
+        data = json.loads(text)
+        if not isinstance(data, list):
+            raise ValueError(f"{path}: expected a JSON array")
+        return data
+    return [json.loads(line) for line in text.splitlines() if line.strip()]
 
 
 def extract_arabic_numbers(text: str) -> list[str]:
@@ -59,16 +61,16 @@ def format_counter(counter: Counter[Any]) -> str:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--full", type=Path, default=Path("data/final/finance_laj_benchmark_full.jsonl"))
-    parser.add_argument("--failures", type=Path, default=Path("data/interim/ffn_generation_failures.jsonl"))
+    parser.add_argument("--full", type=Path, default=Path("data/final/finance_laj_benchmark_full.json"))
+    parser.add_argument("--failures", type=Path, default=Path("data/interim/ffn_generation_failures.json"))
     parser.add_argument("--report", type=Path, default=Path("data/final/dataset_report.md"))
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    rows = read_jsonl(args.full)
-    failures = read_jsonl(args.failures)
+    rows = read_json(args.full)
+    failures = read_json(args.failures)
 
     position_counter = Counter()
     for row in rows:

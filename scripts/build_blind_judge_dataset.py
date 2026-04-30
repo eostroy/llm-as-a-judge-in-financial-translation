@@ -13,28 +13,28 @@ from typing import Any
 LABELS = ["A", "B", "C"]
 
 
-def read_jsonl(path: Path) -> list[dict[str, Any]]:
-    rows = []
-    with path.open("r", encoding="utf-8-sig") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                rows.append(json.loads(line))
-    return rows
+def read_json(path: Path) -> list[dict[str, Any]]:
+    text = path.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return []
+    if text.startswith("["):
+        data = json.loads(text)
+        if not isinstance(data, list):
+            raise ValueError(f"{path}: expected a JSON array")
+        return data
+    return [json.loads(line) for line in text.splitlines() if line.strip()]
 
 
-def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
+def write_json(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="\n") as f:
-        for row in rows:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", type=Path, default=Path("data/interim/ffn_with_generated_variants.jsonl"))
-    parser.add_argument("--full-output", type=Path, default=Path("data/final/finance_laj_benchmark_full.jsonl"))
-    parser.add_argument("--blind-output", type=Path, default=Path("data/final/finance_laj_benchmark_blind.jsonl"))
+    parser.add_argument("--input", type=Path, default=Path("data/interim/ffn_with_generated_variants.json"))
+    parser.add_argument("--full-output", type=Path, default=Path("data/final/finance_laj_benchmark_full.json"))
+    parser.add_argument("--blind-output", type=Path, default=Path("data/final/finance_laj_benchmark_blind.json"))
     parser.add_argument("--seed", type=int, default=42)
     return parser.parse_args()
 
@@ -42,7 +42,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     rng = random.Random(args.seed)
-    rows = read_jsonl(args.input)
+    rows = read_json(args.input)
     full_rows: list[dict[str, Any]] = []
     blind_rows: list[dict[str, Any]] = []
 
@@ -88,8 +88,8 @@ def main() -> int:
         )
         blind_rows.append(common)
 
-    write_jsonl(args.full_output, full_rows)
-    write_jsonl(args.blind_output, blind_rows)
+    write_json(args.full_output, full_rows)
+    write_json(args.blind_output, blind_rows)
     print(f"Wrote full dataset: {args.full_output}")
     print(f"Wrote blind dataset: {args.blind_output}")
     return 0

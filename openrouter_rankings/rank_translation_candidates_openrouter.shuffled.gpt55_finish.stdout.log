@@ -1,0 +1,14 @@
+
+model: openai/gpt-5.5
+output: openrouter_rankings\ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.5.jsonl
+rows: 200, already done: 191
+[192/200] 192
+[193/200] 193
+[194/200] 194
+[195/200] 195
+[196/200] 196
+[197/200] 197
+[198/200] 198
+[199/200] 199
+[200/200] 200
+done for openai/gpt-5.5: ok=9, skipped=191, failed=0

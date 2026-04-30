@@ -1,0 +1,86 @@
+
+model: deepseek/deepseek-v4-flash
+output: openrouter_rankings\ffn_200ec.with_candidates.ranked.deepseek__deepseek-v4-flash.jsonl
+rows: 200, already done: 0
+[1/200] 001
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+  attempt 3 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 90s
+  attempt 4 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 120s
+[2/200] 002
+[3/200] 003
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+[4/200] 004
+[5/200] 005
+[6/200] 006
+[7/200] 007
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+[8/200] 008
+[9/200] 009
+[10/200] 010
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+  attempt 3 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 90s
+[11/200] 011
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+  attempt 3 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 90s
+  attempt 4 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 120s
+[12/200] 012
+[13/200] 013
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)>; retrying in 4s
+[14/200] 014
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+  attempt 3 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 90s
+[15/200] 015
+[16/200] 016
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+  attempt 3 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 90s
+  attempt 4 failed: 'choices'; retrying in 16s
+[17/200] 017
+[18/200] 018
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+[19/200] 019
+[20/200] 020
+[21/200] 021
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[22/200] 022
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[23/200] 023
+[24/200] 024
+[25/200] 025
+[26/200] 026
+[27/200] 027
+[28/200] 028
+[29/200] 029
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[30/200] 030
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[31/200] 031
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[32/200] 032
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[33/200] 033
+[34/200] 034
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[35/200] 035
+[36/200] 036
+[37/200] 037
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+  attempt 2 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 60s
+  attempt 3 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"AkashML","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 90s
+  attempt 4 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 120s
+  attempt 5 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 150s
+[38/200] 038
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s
+[39/200] 039
+[40/200] 040
+  failed: IncompleteRead(77 bytes read)
+[41/200] 041
+  attempt 1 failed: HTTP 429 Too Many Requests: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"deepseek/deepseek-v4-flash is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations","provider_name":"DeepInfra","is_byok":false}},"user_id":"user_38CWIuxjEmIMAjyD5qa39ysmox4"}; retrying in 30s

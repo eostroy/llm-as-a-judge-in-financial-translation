@@ -10,30 +10,36 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_INPUT = Path("ffn_200ec.with_candidates.jsonl")
-DEFAULT_OUTPUT = Path("ffn_200ec.with_candidates.shuffled.jsonl")
+DEFAULT_INPUT = Path("benchmark/ffn_200ec.with_candidates.json")
+DEFAULT_OUTPUT = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
 DEFAULT_SEED = 20260429
 CANDIDATES = ("A", "B", "C")
 
 
-def read_jsonl(path: Path) -> list[dict[str, Any]]:
+def read_json(path: Path) -> list[dict[str, Any]]:
+    text = path.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return []
+    if text.startswith("["):
+        data = json.loads(text)
+        if not isinstance(data, list):
+            raise ValueError(f"{path}: expected a JSON array")
+        return data
     rows = []
-    with path.open("r", encoding="utf-8-sig") as f:
-        for line_no, line in enumerate(f, start=1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rows.append(json.loads(line))
-            except json.JSONDecodeError as exc:
-                raise ValueError(f"{path}:{line_no}: invalid JSON: {exc}") from exc
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rows.append(json.loads(line))
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"{path}:{line_no}: invalid JSON: {exc}") from exc
     return rows
 
 
-def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
-    with path.open("w", encoding="utf-8", newline="\n") as f:
-        for row in rows:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+def write_json(path: Path, rows: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def shuffle_rows(rows: list[dict[str, Any]], seed: int) -> list[dict[str, Any]]:
@@ -60,9 +66,9 @@ def main() -> int:
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     args = parser.parse_args()
 
-    rows = read_jsonl(args.input)
+    rows = read_json(args.input)
     shuffled = shuffle_rows(rows, args.seed)
-    write_jsonl(args.output, shuffled)
+    write_json(args.output, shuffled)
     counts = {letter: 0 for letter in CANDIDATES}
     for row in shuffled:
         for new_letter, original_letter in row["candidate_position_map"].items():

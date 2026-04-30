@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-"""Generate two extra translation candidates for each row in an FFN JSONL file.
+"""Generate two extra translation candidates for each row in an FFN JSON file.
 
 Default input:
-  ffn_200ec.jsonl
+  ffn_200ec.json
 
 Default output:
-  ffn_200ec.with_variants.jsonl
+  ffn_200ec.with_variants.json
 """
 
 from __future__ import annotations
@@ -35,30 +35,38 @@ def now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def read_jsonl(path: Path) -> list[dict[str, Any]]:
+def read_json(path: Path) -> list[dict[str, Any]]:
+    text = path.read_text(encoding="utf-8-sig").strip()
+    if not text:
+        return []
+    if text.startswith("["):
+        data = json.loads(text)
+        if not isinstance(data, list):
+            raise ValueError(f"{path}: expected a JSON array")
+        return data
     rows: list[dict[str, Any]] = []
-    with path.open("r", encoding="utf-8-sig") as f:
-        for line_no, line in enumerate(f, start=1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rows.append(json.loads(line))
-            except json.JSONDecodeError as exc:
-                raise ValueError(f"{path}:{line_no} is not valid JSON: {exc}") from exc
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rows.append(json.loads(line))
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"{path}:{line_no} is not valid JSON: {exc}") from exc
     return rows
 
 
-def append_jsonl(path: Path, row: dict[str, Any]) -> None:
+def append_json(path: Path, row: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8", newline="\n") as f:
-        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    rows = read_json(path) if path.exists() else []
+    rows.append(row)
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def done_ids(path: Path) -> set[str]:
     if not path.exists():
         return set()
-    return {str(row.get("id")) for row in read_jsonl(path) if row.get("id")}
+    return {str(row.get("id")) for row in read_json(path) if row.get("id")}
 
 
 def build_prompt(row: dict[str, Any]) -> str:
@@ -245,9 +253,9 @@ def call_with_retries(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=Path, default=Path("ffn_200ec.jsonl"))
-    parser.add_argument("--output", type=Path, default=Path("ffn_200ec.with_variants.jsonl"))
-    parser.add_argument("--errors", type=Path, default=Path("generation_errors.jsonl"))
+    parser.add_argument("--input", type=Path, default=Path("benchmark/ffn_200ec.json"))
+    parser.add_argument("--output", type=Path, default=Path("benchmark/ffn_200ec.with_variants.json"))
+    parser.add_argument("--errors", type=Path, default=Path("generation_errors.json"))
     parser.add_argument("--base-url", default=os.getenv("MOONSHOT_BASE_URL", BASE_URL))
     parser.add_argument("--model", default=os.getenv("MOONSHOT_MODEL", MODEL))
     parser.add_argument("--timeout", type=int, default=90)
@@ -272,7 +280,7 @@ def main() -> int:
             if path.exists():
                 path.unlink()
 
-    rows = read_jsonl(args.input)
+    rows = read_json(args.input)
     if args.limit is not None:
         rows = rows[: args.limit]
 
@@ -304,7 +312,7 @@ def main() -> int:
                 timeout=args.timeout,
                 retries=args.retries,
             )
-            append_jsonl(
+            append_json(
                 args.output,
                 {
                     **row,
@@ -317,7 +325,7 @@ def main() -> int:
             ok += 1
         except Exception as exc:  # noqa: BLE001 - keep the batch going.
             failed += 1
-            append_jsonl(args.errors, {"id": sample_id, "error": str(exc), "timestamp": now()})
+            append_json(args.errors, {"id": sample_id, "error": str(exc), "timestamp": now()})
             print(f"  failed: {exc}")
 
     print(f"done: ok={ok}, skipped={skipped}, failed={failed}")

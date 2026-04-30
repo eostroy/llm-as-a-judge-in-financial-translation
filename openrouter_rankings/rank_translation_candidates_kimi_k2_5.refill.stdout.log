@@ -1,0 +1,6 @@
+
+model: moonshotai/kimi-k2.5
+output: openrouter_rankings\ffn_200ec.with_candidates.ranked.moonshotai__kimi-k2.5.jsonl
+rows: 200, already done: 199
+[135/200] 135
+done for moonshotai/kimi-k2.5: ok=1, skipped=199, failed=0
