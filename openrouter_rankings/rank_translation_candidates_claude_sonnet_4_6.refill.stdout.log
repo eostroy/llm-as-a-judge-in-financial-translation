@@ -1,6 +1,0 @@
-
-model: anthropic/claude-sonnet-4.6
-output: openrouter_rankings\ffn_200ec.with_candidates.ranked.anthropic__claude-sonnet-4.6.jsonl
-rows: 200, already done: 199
-[180/200] 180
-done for anthropic/claude-sonnet-4.6: ok=1, skipped=199, failed=0

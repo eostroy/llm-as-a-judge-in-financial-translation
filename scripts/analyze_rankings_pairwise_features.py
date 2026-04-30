@@ -23,17 +23,17 @@ from typing import Any
 
 
 DATASET = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
-OUT_DIR = Path("analysis_outputs")
+OUT_DIR = Path("results/analysis/ec_pilot")
 MODEL_FILES = {
-    "openai__gpt-5.2": Path("openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
+    "openai__gpt-5.2": Path("results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
     "google__gemini-3-flash-preview": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
+        "results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
     ),
     "anthropic__claude-sonnet-4.6": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
+        "results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
     ),
     "moonshotai__kimi-k2.5": Path(
-        "openrouter_rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
+        "results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
     ),
 }
 CANDIDATES = ("A", "B", "C")

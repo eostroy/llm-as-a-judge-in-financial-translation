@@ -23,7 +23,7 @@ OPENROUTER_API_KEY = "sk-or-v1-03cc03e44f029aa434d80273c7c2ce614e95cd50afb09e8e4
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 DEFAULT_INPUT = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
 DEFAULT_PROMPT = Path("prompts/rank_candidates_prompt.txt")
-DEFAULT_OUTPUT_DIR = Path("openrouter_rankings")
+DEFAULT_OUTPUT_DIR = Path("results/rankings/ec")
 DEFAULT_MODELS = "openai/gpt-5.5"
 CANDIDATE_FIELDS = ["candidate_A", "candidate_B", "candidate_C"]
 RESULT_FIELD = "rank"
@@ -340,3 +340,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

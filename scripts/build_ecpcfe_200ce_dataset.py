@@ -16,7 +16,7 @@ from typing import Any
 
 
 EC_REFERENCE = Path("benchmark/ffn_200ec.json")
-ECPCFE_ROOT = Path("untagged ECPCFE")
+ECPCFE_ROOT = Path("data/raw/ecpcfe_untagged")
 OUTPUT = Path("benchmark/ecpcfe_200ce.json")
 SEED = 20260430
 TARGET_SIZE = 200
