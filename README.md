@@ -1,44 +1,42 @@
 # LLM-as-a-Judge Translation Benchmark
 
-This workspace contains EC/CE translation benchmark data, model ranking outputs,
-and analysis scripts for comparing LLM judge preferences.
+This workspace contains parallel EC/CE translation benchmark data, model
+ranking outputs, and analysis scripts for comparing LLM judge preferences.
 
 ## Directory Layout
 
-- `benchmark/`  
-  Final benchmark JSON files used for generation, ranking, and analysis.
+- `ec/`  
+  English-to-Chinese benchmark area. Contains EC datasets, EC ranking outputs,
+  EC logs, and EC analysis scripts/results.
+
+- `ce/`  
+  Chinese-to-English benchmark area. Contains CE datasets, CE ranking outputs,
+  CE logs, and CE data-generation/ranking scripts.
 
 - `data/raw/`  
-  Original source materials, including FFN raw data and untagged ECPCFE text files.
-
-- `data/interim/`  
-  Intermediate converted datasets kept for reproducibility.
+  Original source materials, including FFN raw data and untagged ECPCFE text
+  files used to construct benchmark samples.
 
 - `frontend/`  
   Browser-based JSON translation reader/editor.
 
 - `prompts/`  
-  Prompt templates for candidate ranking.
+  Prompt templates shared by ranking scripts.
 
-- `results/rankings/ec/`  
-  EC model ranking outputs.
-
-- `results/analysis/ec_pilot/`  
-  EC pilot analysis outputs, including consensus, agreement, embedding features,
-  and syntax/information-structure features.
-
-- `results/logs/`  
-  Runtime logs split by task type.
-
-- `scripts/`  
-  Dataset construction, candidate generation, ranking, and analysis scripts.
+- `scripts/shared/`  
+  Legacy or shared utility scripts that are not tied to one direction.
 
 ## Main Files
 
-- EC test set: `benchmark/ffn_200ec.with_candidates.shuffled.json`
-- CE test set: `benchmark/ecpcfe_200ce.with_variants.json`
+- EC shuffled test set: `ec/datasets/ffn_200ec.with_candidates.shuffled.json`
+- EC rankings: `ec/results/rankings/`
+- EC analysis: `ec/results/analysis/pilot/`
+
+- CE shuffled test set: `ce/datasets/ecpcfe_200ce.with_candidates.shuffled.json`
+- CE rankings: `ce/results/rankings/`
+- CE original generated variants: `ce/datasets/ecpcfe_200ce.with_variants.json`
+
 - JSON editor: `frontend/json_translation_editor.html`
-- Ranking script template: `scripts/rank_translation_candidates_openrouter.py`
-- CE candidate generation: `scripts/generate_translation_candidates.py`
-- EC embedding analysis: `scripts/analyze_ec_embedding_features.py`
-- EC syntax analysis: `scripts/analyze_ec_syntax_info_features.py`
+- EC ranking script: `ec/scripts/rank_translation_candidates_openrouter.py`
+- CE ranking script: `ce/scripts/rank_translation_candidates_openrouter.py`
+- CE candidate generation: `ce/scripts/generate_translation_candidates.py`

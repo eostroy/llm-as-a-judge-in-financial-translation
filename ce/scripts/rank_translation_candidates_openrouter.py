@@ -21,10 +21,10 @@ from typing import Any
 
 OPENROUTER_API_KEY = "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"  # Optional: paste your OpenRouter API key here.
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-DEFAULT_INPUT = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
+DEFAULT_INPUT = Path("ce/datasets/ecpcfe_200ce.with_candidates.shuffled.json")
 DEFAULT_PROMPT = Path("prompts/rank_candidates_prompt.txt")
-DEFAULT_OUTPUT_DIR = Path("results/rankings/ec")
-DEFAULT_MODELS = "anthropic/claude-sonnet-4.6"
+DEFAULT_OUTPUT_DIR = Path("ce/results/rankings")
+DEFAULT_MODELS = "openai/gpt-5.5"
 CANDIDATE_FIELDS = ["candidate_A", "candidate_B", "candidate_C"]
 RESULT_FIELD = "rank"
 
@@ -340,4 +340,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
 

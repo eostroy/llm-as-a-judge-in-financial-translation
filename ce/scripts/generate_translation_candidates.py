@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Generate two extra translation candidates for each row in an FFN JSON file.
 
 Default input:
@@ -253,9 +253,9 @@ def call_with_retries(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=Path, default=Path("benchmark/ffn_200ec.json"))
-    parser.add_argument("--output", type=Path, default=Path("benchmark/ffn_200ec.with_variants.json"))
-    parser.add_argument("--errors", type=Path, default=Path("generation_errors.json"))
+    parser.add_argument("--input", type=Path, default=Path("ce/datasets/ecpcfe_200ce.json"))
+    parser.add_argument("--output", type=Path, default=Path("ce/datasets/ecpcfe_200ce.with_variants.json"))
+    parser.add_argument("--errors", type=Path, default=Path("ce/results/logs/generation/ecpcfe_200ce_generation_errors.json"))
     parser.add_argument("--base-url", default=os.getenv("MOONSHOT_BASE_URL", BASE_URL))
     parser.add_argument("--model", default=os.getenv("MOONSHOT_MODEL", MODEL))
     parser.add_argument("--timeout", type=int, default=90)
@@ -334,3 +334,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+

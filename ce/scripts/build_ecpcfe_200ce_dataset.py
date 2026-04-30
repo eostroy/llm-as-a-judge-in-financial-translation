@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Build a 200-row CE parallel dataset from untagged ECPCFE files.
 
 The output is a JSON array, following the field style of the existing FFN EC
@@ -15,9 +15,9 @@ from pathlib import Path
 from typing import Any
 
 
-EC_REFERENCE = Path("benchmark/ffn_200ec.json")
+EC_REFERENCE = Path("ec/datasets/ffn_200ec.json")
 ECPCFE_ROOT = Path("data/raw/ecpcfe_untagged")
-OUTPUT = Path("benchmark/ecpcfe_200ce.json")
+OUTPUT = Path("ce/datasets/ecpcfe_200ce.json")
 SEED = 20260430
 TARGET_SIZE = 200
 DOMAIN_ORDER = [
@@ -310,3 +310,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+

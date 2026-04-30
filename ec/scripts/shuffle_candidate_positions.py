@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Create a copy of the EC test set with candidate positions shuffled."""
 
 from __future__ import annotations
@@ -10,8 +10,8 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_INPUT = Path("benchmark/ffn_200ec.with_candidates.json")
-DEFAULT_OUTPUT = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
+DEFAULT_INPUT = Path("ec/datasets/ffn_200ec.with_candidates.json")
+DEFAULT_OUTPUT = Path("ec/datasets/ffn_200ec.with_candidates.shuffled.json")
 DEFAULT_SEED = 20260429
 CANDIDATES = ("A", "B", "C")
 
@@ -81,3 +81,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+

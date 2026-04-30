@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Analyze completed translation-ranking outputs.
 
 This script intentionally ignores GPT-5.5 and the live DeepSeek run. It uses
@@ -22,18 +22,18 @@ from pathlib import Path
 from typing import Any
 
 
-DATASET = Path("benchmark/ffn_200ec.with_candidates.shuffled.json")
-OUT_DIR = Path("results/analysis/ec_pilot")
+DATASET = Path("ec/datasets/ffn_200ec.with_candidates.shuffled.json")
+OUT_DIR = Path("ec/results/analysis/pilot")
 MODEL_FILES = {
-    "openai__gpt-5.2": Path("results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
+    "openai__gpt-5.2": Path("ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
     "google__gemini-3-flash-preview": Path(
-        "results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
+        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
     ),
     "anthropic__claude-sonnet-4.6": Path(
-        "results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
+        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
     ),
     "moonshotai__kimi-k2.5": Path(
-        "results/rankings/ec/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
+        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
     ),
 }
 CANDIDATES = ("A", "B", "C")
@@ -875,3 +875,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+

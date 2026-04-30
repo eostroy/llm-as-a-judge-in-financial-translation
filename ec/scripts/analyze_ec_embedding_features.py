@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 """Rerun EC deep-feature analysis with OpenRouter Gemini embeddings.
 
 This adds real cross-lingual embedding cosine similarity from
@@ -319,3 +319,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+
