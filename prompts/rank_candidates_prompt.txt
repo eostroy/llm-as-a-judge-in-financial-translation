@@ -12,8 +12,7 @@ Return JSON only, using this format:
     "A": 2,
     "B": 1,
     "C": 3
-  },
-  "reason": "Briefly explain the ranking."
+  }
 }
 
 The rank object must map each candidate letter to its placement:

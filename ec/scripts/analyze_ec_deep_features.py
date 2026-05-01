@@ -1,10 +1,9 @@
 ﻿#!/usr/bin/env python
-"""Extract deeper local proxy features for EC candidate rankings.
+"""Extract lightweight rule-based control features for EC candidate rankings.
 
 The script compares the four completed shuffled EC ranking outputs. It does
-not call external embedding or NLI services; semantic similarity and NLI are
-therefore deterministic proxy scores based on information preservation,
-terminology coverage, polarity/direction checks, and boundary violations.
+not compute semantic similarity or NLI proxies; those are handled by separate
+model-based embedding and cross-lingual NLI analyses.
 """
 
 from __future__ import annotations
@@ -20,17 +19,24 @@ from typing import Any
 
 
 DATASET = Path("ec/datasets/ffn_200ec.with_candidates.shuffled.json")
-OUT_DIR = Path("ec/results/analysis/pilot")
+OUT_DIR = Path("ec/results/rule_based_proxy_features/analysis/pilot")
+OUT_JSON_DIR = Path("ec/results/rule_based_proxy_features/analysis/pilot/json")
+OUT_CSV_DIR = Path("ec/results/rule_based_proxy_features/analysis/pilot/csv")
 MODEL_FILES = {
-    "openai__gpt-5.2": Path("ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
+    "openai__gpt-5.2": Path(
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"
+    ),
     "google__gemini-3-flash-preview": Path(
-        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
     ),
     "anthropic__claude-sonnet-4.6": Path(
-        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
     ),
     "moonshotai__kimi-k2.5": Path(
-        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
+    ),
+    "deepseek__deepseek-v4-flash": Path(
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.deepseek__deepseek-v4-flash.json"
     ),
 }
 CANDIDATES = ("A", "B", "C")
@@ -40,13 +46,9 @@ DEEP_FEATURE_KEYS = [
     "extra_number_count",
     "extra_number_ratio",
     "extra_entity_count",
-    "specificity_expansion",
     "financial_register_score",
     "statistical_register_score",
     "register_score",
-    "cross_lingual_semantic_similarity_proxy",
-    "nli_consistency_proxy",
-    "syntactic_complexity",
     "translationese_score",
 ]
 
@@ -277,17 +279,6 @@ def sentence_lengths_zh(text: str) -> list[int]:
     return [len(piece) for piece in pieces] or [len(text)]
 
 
-def syntactic_complexity(candidate: str) -> float:
-    lengths = sentence_lengths_zh(candidate)
-    avg_sentence = sum(lengths) / len(lengths)
-    comma_density = candidate.count("，") / max(len(candidate), 1) * 100
-    parenthetical = candidate.count("（") + candidate.count("(")
-    clause_markers = count_terms(candidate, ["由于", "因此", "虽然", "但", "而", "并", "以及", "其中", "如果", "则"])
-    raw = 0.35 * min(avg_sentence / 90, 1.5) + 0.25 * min(comma_density / 4, 1.5)
-    raw += 0.20 * min(clause_markers / 8, 1.5) + 0.20 * min(parenthetical / 3, 1.5)
-    return round(clamp(raw, 0.0, 1.5), 6)
-
-
 def translationese_score(candidate: str) -> float:
     marker_hits = count_terms(candidate, TRANSLATIONESE_MARKERS)
     de_ratio = candidate.count("的") / max(len(re.findall(r"[\u4e00-\u9fff]", candidate)), 1)
@@ -308,47 +299,6 @@ def register_scores(candidate: str) -> tuple[float, float, float]:
     return round(financial_score, 6), round(statistical_score, 6), round(combined, 6)
 
 
-def specificity_expansion(source: str, candidate: str) -> float:
-    source_words = max(len(re.findall(r"\b\w+\b", source)), 1)
-    expected_zh_chars = source_words * 2.2
-    length_expansion = max(0.0, len(candidate) - expected_zh_chars) / expected_zh_chars
-    marker_score = count_terms(candidate, SPECIFICITY_MARKERS) / 6
-    number_score = extra_number_count(source, candidate) / max(len(numeric_tokens(source)), 1)
-    entity_score = extra_entity_count(source, candidate) / 3
-    raw = 0.45 * min(length_expansion, 1.5) + 0.25 * min(marker_score, 1.5)
-    raw += 0.20 * min(number_score, 1.5) + 0.10 * min(entity_score, 1.5)
-    return round(clamp(raw, 0.0, 1.5), 6)
-
-
-def semantic_similarity_proxy(source: str, candidate: str) -> float:
-    number = overlap_ratio(numeric_tokens(source), numeric_tokens(candidate))
-    entity = entity_preservation(source, candidate)
-    term = glossary_coverage(source, candidate, TERM_GLOSSARY)
-    direction = direction_score(source, candidate)
-    negation = negation_score(source, candidate)
-    extra_boundary_penalty = min(0.20, 0.04 * extra_number_count(source, candidate) + 0.03 * extra_entity_count(source, candidate))
-    score = 0.30 * number + 0.25 * entity + 0.25 * term + 0.10 * direction + 0.10 * negation
-    return round(clamp(score - extra_boundary_penalty), 6)
-
-
-def nli_consistency_proxy(source: str, candidate: str) -> float:
-    missing_numbers = 1.0 - overlap_ratio(numeric_tokens(source), numeric_tokens(candidate))
-    missing_entities = 1.0 - entity_preservation(source, candidate)
-    term_gap = 1.0 - glossary_coverage(source, candidate, TERM_GLOSSARY)
-    direction_gap = 1.0 - direction_score(source, candidate)
-    negation_gap = 1.0 - negation_score(source, candidate)
-    extra_gap = min(1.0, 0.15 * extra_number_count(source, candidate) + 0.10 * extra_entity_count(source, candidate))
-    contradiction_risk = (
-        0.28 * missing_numbers
-        + 0.22 * missing_entities
-        + 0.18 * term_gap
-        + 0.16 * direction_gap
-        + 0.10 * negation_gap
-        + 0.06 * extra_gap
-    )
-    return round(clamp(1.0 - contradiction_risk), 6)
-
-
 def candidate_features(row: dict[str, Any], letter: str) -> dict[str, float]:
     source = str(row["source_text"])
     candidate = str(row[f"candidate_{letter}"])
@@ -360,13 +310,9 @@ def candidate_features(row: dict[str, Any], letter: str) -> dict[str, float]:
         "extra_number_count": float(extra_num),
         "extra_number_ratio": round(extra_num / source_numbers, 6),
         "extra_entity_count": float(extra_ent),
-        "specificity_expansion": specificity_expansion(source, candidate),
         "financial_register_score": financial,
         "statistical_register_score": statistical,
         "register_score": register,
-        "cross_lingual_semantic_similarity_proxy": semantic_similarity_proxy(source, candidate),
-        "nli_consistency_proxy": nli_consistency_proxy(source, candidate),
-        "syntactic_complexity": syntactic_complexity(candidate),
         "translationese_score": translationese_score(candidate),
     }
 
@@ -484,7 +430,7 @@ def pairwise_preference_rows(
 
 def feature_rank_rows(top1_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = []
-    lower_is_more = {"extra_number_count", "extra_number_ratio", "extra_entity_count", "specificity_expansion", "translationese_score"}
+    lower_is_more = {"extra_number_count", "extra_number_ratio", "extra_entity_count", "translationese_score"}
     for key in DEEP_FEATURE_KEYS:
         metric = f"avg_{key}"
         ordered = sorted(top1_rows, key=lambda row: row[metric], reverse=key not in lower_is_more)
@@ -512,7 +458,8 @@ def top1_detail_rows(
 
 
 def main() -> int:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
     dataset_rows = read_json(DATASET)
     rankings = load_rankings()
     expected_ids = {str(row["id"]) for row in dataset_rows}
@@ -527,30 +474,30 @@ def main() -> int:
     rank_rows = feature_rank_rows(top1_rows)
     detail_rows = top1_detail_rows(dataset_rows, rankings, features_by_id)
 
-    write_json(OUT_DIR / "ffn_200ec.deep_features.by_candidate.json", enriched)
-    write_json(OUT_DIR / "ffn_200ec.deep_features.model_top1_by_sample.json", detail_rows)
+    write_json(OUT_JSON_DIR / "ffn_200ec.deep_features.by_candidate.json", enriched)
+    write_json(OUT_JSON_DIR / "ffn_200ec.deep_features.model_top1_by_sample.json", detail_rows)
     write_json(
-        OUT_DIR / "ffn_200ec.deep_features.method_notes.json",
+        OUT_JSON_DIR / "ffn_200ec.deep_features.method_notes.json",
         [
             {
-                "note": "cross_lingual_semantic_similarity_proxy and nli_consistency_proxy are deterministic local proxy scores, not neural embedding/NLI model outputs.",
+                "note": "Rule-based lightweight controls only. Composite semantic_similarity_proxy, nli_consistency_proxy, and specificity_expansion were removed in favor of model-based embedding/NLI analyses.",
                 "dataset": str(DATASET),
                 "models": sorted(MODEL_FILES),
             }
         ],
     )
     write_csv(
-        OUT_DIR / "ffn_200ec.deep_features.model_top1_averages.csv",
+        OUT_CSV_DIR / "ffn_200ec.deep_features.model_top1_averages.csv",
         top1_rows,
         ["model", "n", "top_A", "top_B", "top_C"] + [f"avg_{key}" for key in DEEP_FEATURE_KEYS],
     )
     write_csv(
-        OUT_DIR / "ffn_200ec.deep_features.pairwise_logistic_preferences.csv",
+        OUT_CSV_DIR / "ffn_200ec.deep_features.pairwise_logistic_preferences.csv",
         preference_rows,
         ["model", "feature", "standardized_coefficient", "training_accuracy", "intercept", "n_pairwise_observations"],
     )
     write_csv(
-        OUT_DIR / "ffn_200ec.deep_features.model_feature_ranks.csv",
+        OUT_CSV_DIR / "ffn_200ec.deep_features.model_feature_ranks.csv",
         rank_rows,
         ["feature", "model", "value", "rank_for_feature"],
     )

@@ -4,6 +4,9 @@
 Metrics:
 - clause_count
 - dependency_depth
+- mean_dependency_distance
+- max_dependency_distance
+- normalized_dependency_distance
 - nominalization_ratio
 - modifier_density
 - coordination_count
@@ -26,7 +29,6 @@ from analyze_ec_deep_features import (
     CANDIDATES,
     DATASET,
     MODEL_FILES,
-    OUT_DIR,
     PAIRS,
     fit_logistic,
     read_json,
@@ -37,9 +39,15 @@ from analyze_ec_deep_features import (
 )
 
 
+OUT_DIR = Path("ec/results/parser_derived_syntactic_metrics/analysis/pilot")
+OUT_JSON_DIR = OUT_DIR / "json"
+OUT_CSV_DIR = OUT_DIR / "csv"
 FEATURE_KEYS = [
     "clause_count",
     "dependency_depth",
+    "mean_dependency_distance",
+    "max_dependency_distance",
+    "normalized_dependency_distance",
     "nominalization_ratio",
     "modifier_density",
     "coordination_count",
@@ -47,7 +55,7 @@ FEATURE_KEYS = [
     "sentence_compression_ratio",
 ]
 
-CACHE_PATH = OUT_DIR / "ffn_200ec.syntax_info_features.cache.json"
+CACHE_PATH = OUT_JSON_DIR / "ffn_200ec.syntax_info_features.cache.json"
 CLAUSE_DEPRELS = {"root", "ccomp", "xcomp", "acl", "advcl", "parataxis", "conj"}
 MODIFIER_DEPRELS = {"amod", "advmod", "nmod", "acl", "det", "clf", "mark", "case"}
 COORDINATION_WORDS = {"和", "及", "以及", "并", "并且", "或", "或者", "与", "、"}
@@ -100,6 +108,25 @@ def max_dependency_depth(sentence: Any) -> int:
     return max((depth(root_id) for root_id in children.get(0, [])), default=0)
 
 
+def dependency_distance_stats(sentences: list[Any]) -> tuple[float, float, float]:
+    distances = []
+    token_count = 0
+    for sentence in sentences:
+        sentence_words = list(sentence.words)
+        token_count += len(sentence_words)
+        for word in sentence_words:
+            head = int(word.head)
+            if head == 0:
+                continue
+            distances.append(abs(int(word.id) - head))
+    if not distances:
+        return 0.0, 0.0, 0.0
+    mean_distance = sum(distances) / len(distances)
+    max_distance = max(distances)
+    normalized_distance = mean_distance / max(token_count - len(sentences), 1)
+    return mean_distance, float(max_distance), normalized_distance
+
+
 def stanza_features(nlp: Any, source: str, candidate: str) -> dict[str, float]:
     doc = nlp(candidate)
     words = [word for sentence in doc.sentences for word in sentence.words]
@@ -113,6 +140,9 @@ def stanza_features(nlp: Any, source: str, candidate: str) -> dict[str, float]:
 
     depths = [max_dependency_depth(sentence) for sentence in doc.sentences]
     dependency_depth = max(depths) if depths else 0
+    mean_dependency_distance, max_dependency_distance, normalized_dependency_distance = dependency_distance_stats(
+        doc.sentences
+    )
 
     nominal_pos = sum(1 for word in words if word.upos in {"NOUN", "PROPN", "PRON"})
     nominal_suffix = sum(1 for word in words if str(word.text).endswith(NOMINALIZATION_SUFFIXES))
@@ -135,6 +165,9 @@ def stanza_features(nlp: Any, source: str, candidate: str) -> dict[str, float]:
     return {
         "clause_count": float(clause_count),
         "dependency_depth": float(dependency_depth),
+        "mean_dependency_distance": round(mean_dependency_distance, 6),
+        "max_dependency_distance": round(max_dependency_distance, 6),
+        "normalized_dependency_distance": round(normalized_dependency_distance, 6),
         "nominalization_ratio": round(nominalization_ratio, 6),
         "modifier_density": round(modifier_density, 6),
         "coordination_count": float(coordination_count),
@@ -155,7 +188,7 @@ def compute_features(dataset_rows: list[dict[str, Any]], cache_path: Path) -> tu
         row_features: dict[str, dict[str, float]] = {}
         for letter in CANDIDATES:
             cache_key = f"{sample_id}:{letter}"
-            if cache_key not in cache:
+            if cache_key not in cache or any(key not in cache[cache_key] for key in FEATURE_KEYS):
                 cache[cache_key] = stanza_features(nlp, str(row["source_text"]), str(row[f"candidate_{letter}"]))
                 save_cache(cache_path, cache)
             row_features[letter] = cache[cache_key]
@@ -240,29 +273,32 @@ def main() -> int:
     preference_rows = pairwise_preference_rows(rankings, features_by_id)
     rank_rows = feature_rank_rows(top1_rows)
 
-    write_json(OUT_DIR / "ffn_200ec.syntax_info_features.by_candidate.json", enriched)
+    write_json(OUT_JSON_DIR / "ffn_200ec.syntax_info_features.by_candidate.json", enriched)
     write_csv(
-        OUT_DIR / "ffn_200ec.syntax_info_features.model_top1_averages.csv",
+        OUT_CSV_DIR / "ffn_200ec.syntax_info_features.model_top1_averages.csv",
         top1_rows,
         ["model", "n", "top_A", "top_B", "top_C"] + [f"avg_{key}" for key in FEATURE_KEYS],
     )
     write_csv(
-        OUT_DIR / "ffn_200ec.syntax_info_features.pairwise_logistic_preferences.csv",
+        OUT_CSV_DIR / "ffn_200ec.syntax_info_features.pairwise_logistic_preferences.csv",
         preference_rows,
         ["model", "feature", "standardized_coefficient", "training_accuracy", "intercept", "n_pairwise_observations"],
     )
     write_csv(
-        OUT_DIR / "ffn_200ec.syntax_info_features.model_feature_ranks.csv",
+        OUT_CSV_DIR / "ffn_200ec.syntax_info_features.model_feature_ranks.csv",
         rank_rows,
         ["feature", "model", "value", "rank_for_feature"],
     )
     write_json(
-        OUT_DIR / "ffn_200ec.syntax_info_features.method_notes.json",
+        OUT_JSON_DIR / "ffn_200ec.syntax_info_features.method_notes.json",
         [
             {
                 "parser": "stanza zh-hans tokenize,pos,lemma,depparse",
                 "clause_count": "max of dependency clause heads, punctuation clauses, and parser sentence count",
                 "dependency_depth": "maximum root-to-token dependency depth across parsed sentences",
+                "mean_dependency_distance": "mean absolute token distance between each dependent and its syntactic head, excluding root edges",
+                "max_dependency_distance": "maximum absolute token distance between a dependent and its syntactic head",
+                "normalized_dependency_distance": "mean_dependency_distance divided by non-root token count, reducing sentence-length effects",
                 "nominalization_ratio": "NOUN/PROPN/PRON plus nominal suffix and 的/之 proxy per content token",
                 "sentence_compression_ratio": "Chinese character count divided by English source word count",
             }

@@ -1,5 +1,0 @@
-﻿model,n,top_A,top_B,top_C,avg_clause_count,avg_dependency_depth,avg_nominalization_ratio,avg_modifier_density,avg_coordination_count,avg_passive_or_beishi_count,avg_sentence_compression_ratio
-anthropic__claude-sonnet-4.6,200,45,83,72,12.075,5.555,0.49044,0.365459,4.2,1.85,1.475791
-google__gemini-3-flash-preview,200,69,69,62,12.15,5.54,0.491096,0.366125,4.255,1.81,1.466722
-moonshotai__kimi-k2.5,200,72,78,50,12.065,5.535,0.491314,0.368969,4.245,1.815,1.469475
-openai__gpt-5.2,200,70,70,60,12.145,5.535,0.490377,0.365401,4.215,1.88,1.475399

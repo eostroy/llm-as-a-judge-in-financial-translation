@@ -1,9 +1,5 @@
 ﻿#!/usr/bin/env python
-"""Analyze completed translation-ranking outputs.
-
-This script intentionally ignores GPT-5.5 and the live DeepSeek run. It uses
-the four completed shuffled-position model outputs and writes derived analysis
-files without modifying the source dataset or ranking outputs.
+"""Analyze completed EC translation-ranking outputs.
 
 Pairwise logistic regression is optional and uses only the local proxy features
 defined in this file. It does not call embedding services.
@@ -23,17 +19,22 @@ from typing import Any
 
 
 DATASET = Path("ec/datasets/ffn_200ec.with_candidates.shuffled.json")
-OUT_DIR = Path("ec/results/analysis/pilot")
+OUT_DIR = Path("ec/results/model_based_metrics/analysis/pilot")
 MODEL_FILES = {
-    "openai__gpt-5.2": Path("ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"),
+    "openai__gpt-5.2": Path(
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.openai__gpt-5.2.json"
+    ),
     "google__gemini-3-flash-preview": Path(
-        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.google__gemini-3-flash-preview.json"
     ),
     "anthropic__claude-sonnet-4.6": Path(
-        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.anthropic__claude-sonnet-4.6.json"
     ),
     "moonshotai__kimi-k2.5": Path(
-        "ec/results/rankings/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.moonshotai__kimi-k2.5.json"
+    ),
+    "deepseek__deepseek-v4-flash": Path(
+        "ec/results/model_based_metrics/rankings/json/ffn_200ec.with_candidates.shuffled.ranked.deepseek__deepseek-v4-flash.json"
     ),
 }
 CANDIDATES = ("A", "B", "C")
@@ -138,11 +139,15 @@ def read_json(path: Path) -> list[dict[str, Any]]:
 
 
 def write_json(path: Path, rows: list[dict[str, Any]]) -> None:
+    if path.parent == OUT_DIR:
+        path = OUT_DIR / "json" / path.name
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str]) -> None:
+    if path.parent == OUT_DIR:
+        path = OUT_DIR / "csv" / path.name
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -710,11 +715,11 @@ def main() -> int:
         raise ValueError(f"completed model outputs are missing ids: {bad}")
 
     pairwise_rows = build_pairwise(rankings)
-    write_json(OUT_DIR / "ffn_200ec.four_models.pairwise_judgments.json", pairwise_rows)
+    write_json(OUT_DIR / "ffn_200ec.five_models.pairwise_judgments.json", pairwise_rows)
 
     agreement_rows = pairwise_agreement(pairwise_rows)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.pairwise_agreement.csv",
+        OUT_DIR / "ffn_200ec.five_models.pairwise_agreement.csv",
         agreement_rows,
         [
             "model_1",
@@ -731,7 +736,7 @@ def main() -> int:
 
     top1_rows = average_feature_rows(rankings, features_by_id)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.top1_average_features.csv",
+        OUT_DIR / "ffn_200ec.five_models.top1_average_features.csv",
         top1_rows,
         ["model", "n", "top_A", "top_B", "top_C"] + [f"avg_{key}" for key in FEATURE_KEYS],
     )
@@ -739,7 +744,7 @@ def main() -> int:
     if args.include_logistic:
         logistic_rows = logistic_preference_rows(rankings, features_by_id)
         write_csv(
-            OUT_DIR / "ffn_200ec.four_models.pairwise_logistic_feature_preferences.csv",
+            OUT_DIR / "ffn_200ec.five_models.pairwise_logistic_feature_preferences.csv",
             logistic_rows,
             [
                 "model",
@@ -752,9 +757,9 @@ def main() -> int:
         )
 
     consensus = consensus_rows(rankings)
-    write_json(OUT_DIR / "ffn_200ec.four_models.consensus_borda.json", consensus)
+    write_json(OUT_DIR / "ffn_200ec.five_models.consensus_borda.json", consensus)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.consensus_borda_summary.csv",
+        OUT_DIR / "ffn_200ec.five_models.consensus_borda_summary.csv",
         [
             {
                 "id": row["id"],
@@ -786,7 +791,7 @@ def main() -> int:
 
     model_consensus_rows = model_consensus_agreement_rows(rankings, consensus)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.model_vs_consensus_agreement.csv",
+        OUT_DIR / "ffn_200ec.five_models.model_vs_consensus_agreement.csv",
         model_consensus_rows,
         [
             "model",
@@ -803,7 +808,7 @@ def main() -> int:
 
     top1_entropy_rows, top1_entropy_summary = entropy_rows(rankings)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.top1_entropy_layers.csv",
+        OUT_DIR / "ffn_200ec.five_models.top1_entropy_layers.csv",
         [
             {
                 "id": row["id"],
@@ -816,31 +821,31 @@ def main() -> int:
         ["id", "top1_entropy", "disagreement_layer", "top1_votes"],
     )
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.top1_entropy_layer_summary.csv",
+        OUT_DIR / "ffn_200ec.five_models.top1_entropy_layer_summary.csv",
         top1_entropy_summary,
         ["disagreement_layer", "samples", "avg_top1_entropy"],
     )
 
     condorcet_detail, condorcet_summary = condorcet_rows(rankings)
-    write_json(OUT_DIR / "ffn_200ec.four_models.condorcet_detail.json", condorcet_detail)
+    write_json(OUT_DIR / "ffn_200ec.five_models.condorcet_detail.json", condorcet_detail)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.condorcet_summary.csv",
+        OUT_DIR / "ffn_200ec.five_models.condorcet_summary.csv",
         condorcet_summary,
         ["metric", "A", "B", "C", "none"],
     )
 
     minority_events, minority_summary = minority_model_rows(rankings)
-    write_json(OUT_DIR / "ffn_200ec.four_models.minority_model_events.json", minority_events)
+    write_json(OUT_DIR / "ffn_200ec.five_models.minority_model_events.json", minority_events)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.minority_model_summary.csv",
+        OUT_DIR / "ffn_200ec.five_models.minority_model_summary.csv",
         minority_summary,
         ["model", "minority_events", "top1_minority_events", "unique_full_ranking_events", "samples"],
     )
 
     high_disagreement = disagreement_rows(dataset_by_id, rankings)
-    write_json(OUT_DIR / "ffn_200ec.four_models.high_disagreement_samples.json", high_disagreement)
+    write_json(OUT_DIR / "ffn_200ec.five_models.high_disagreement_samples.json", high_disagreement)
     write_csv(
-        OUT_DIR / "ffn_200ec.four_models.high_disagreement_summary.csv",
+        OUT_DIR / "ffn_200ec.five_models.high_disagreement_summary.csv",
         [
             {
                 "id": row["id"],

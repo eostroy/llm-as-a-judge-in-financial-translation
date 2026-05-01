@@ -1,0 +1,6 @@
+﻿model,n,top_A,top_B,top_C,avg_length_chars,avg_length_ratio_to_source_words,avg_number_preservation,avg_entity_preservation,avg_term_coverage,avg_semantic_similarity_proxy,avg_fluency_proxy
+anthropic__claude-sonnet-4.6,200,45,83,72,125.28,1.723804,0.813718,0.173994,0.853083,0.663687,0.879614
+deepseek__deepseek-v4-flash,200,73,77,50,124.82,1.716919,0.819218,0.17566,0.8485,0.664677,0.879356
+google__gemini-3-flash-preview,200,69,69,62,124.565,1.714016,0.814433,0.173327,0.849333,0.662399,0.879545
+moonshotai__kimi-k2.5,200,72,78,50,124.86,1.717792,0.813718,0.175442,0.848083,0.662632,0.879062
+openai__gpt-5.2,200,70,70,60,125.27,1.723283,0.814933,0.175708,0.858083,0.665763,0.879861

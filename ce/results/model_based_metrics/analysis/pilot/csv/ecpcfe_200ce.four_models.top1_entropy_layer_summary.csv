@@ -1,0 +1,4 @@
+﻿disagreement_layer,samples,avg_top1_entropy
+high,9,1.5
+medium,87,0.872016
+unanimous,104,0.0
