@@ -1,0 +1,4016 @@
+[
+  {
+    "id": "002",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "002",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "002",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "003",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "004",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 1,
+      "B": 3,
+      "C": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "B>A>C": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "004",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 1,
+      "B": 3,
+      "C": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "B>A>C": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "005",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "B>A>C": 4
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "006",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "B>A>C": 2,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "006",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "B>A>C": 2,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "006",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "B>A>C": 2,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "007",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "009",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "010",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "010",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "011",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "B": 2,
+      "A": 2,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "011",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 2,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "011",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "A": 2,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "012",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "012",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "012",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "013",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "B>A>C": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "014",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>C>A": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "014",
+    "model": "openai__gpt-5.2",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>C>A": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "015",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "017",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 1,
+      "A": 2,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>B>C": 1,
+      "B>C>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "017",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 1,
+      "A": 2,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>B>C": 1,
+      "B>C>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "017",
+    "model": "openai__gpt-5.2",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 2,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>B>C": 1,
+      "B>C>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "018",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 4
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "019",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "B>C>A": 2,
+      "B>A>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "021",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>B>C": 3,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "021",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>B>C": 3,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "024",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 1,
+      "A": 3,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "A>B>C": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "024",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 1,
+      "A": 3,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "A>B>C": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "025",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 3,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>B>C": 3,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "025",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 1,
+      "A": 3,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>B>C": 3,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "026",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 1,
+      "B": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>C>B": 1,
+      "B>A>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "026",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 1,
+      "B": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>C>B": 1,
+      "B>A>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "027",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "027",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "028",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "029",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "030",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "031",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "032",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "A>C>B": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "032",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "A>C>B": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "033",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>A>C": 1,
+      "B>C>A": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "033",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>A>C": 1,
+      "B>C>A": 3
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "034",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "B>A>C": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "035",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "035",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "036",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "036",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "037",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "039",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "040",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "041",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "C>B>A": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "041",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "C>B>A": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "041",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "C>B>A": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "042",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>A>B": 1,
+      "C>B>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "042",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>A>B": 1,
+      "C>B>A": 2
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "042",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>A>B": 1,
+      "C>B>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "044",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "045",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>C>B": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "045",
+    "model": "openai__gpt-5.2",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "A>C>B": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "046",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "047",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "048",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "048",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "048",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "050",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "C>B>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "051",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "051",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "052",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 3,
+      "B": 1,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 1,
+      "C>B>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "052",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 1,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 1,
+      "C>B>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "052",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "B": 1,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 1,
+      "C>B>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "053",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "053",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "054",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "056",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "B>A>C": 2,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "059",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "A>C>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "059",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "A>C>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "060",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "061",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>C>A": 4,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "063",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "065",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "C>B>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "065",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "C>B>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "066",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "066",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "066",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "067",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "068",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "A>C>B": 1,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "070",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "B>A>C": 1,
+      "C>A>B": 1,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "070",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "B>A>C": 1,
+      "C>A>B": 1,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "070",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "B>A>C": 1,
+      "C>A>B": 1,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "071",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>C>B": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "071",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>C>B": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "072",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "C>A>B": 3,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "072",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "C>A>B": 3,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "073",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "078",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 3,
+      "B>A>C": 1,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "078",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 3,
+      "B>A>C": 1,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "079",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "B>C>A": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "079",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "B>C>A": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "081",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "081",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "082",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 2,
+      "C>A>B": 2
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "082",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 2,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "082",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 2,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "083",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "083",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "085",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "087",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "087",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "088",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 4
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "090",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>B>C": 1,
+      "A>C>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "090",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>B>C": 1,
+      "A>C>B": 2
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "090",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>B>C": 1,
+      "A>C>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "091",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "092",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "A>C>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "092",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "A>C>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "094",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>C>A": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "094",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>C>A": 3,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "095",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>C>B": 2,
+      "C>A>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "095",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>C>B": 2,
+      "C>A>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "096",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 2,
+      "A": 1,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "A>B>C": 1,
+      "B>A>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "097",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "098",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "C>B>A": 2,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "102",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "B>A>C": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "102",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "B>A>C": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "103",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "104",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 3,
+      "B>C>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "104",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 3,
+      "B>C>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "106",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "108",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 3,
+      "A>C>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "108",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 3,
+      "A>C>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "111",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 1,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "111",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "B": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 1,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "113",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "114",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "114",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "A>C>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "115",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 3,
+      "A>C>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "115",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 3,
+      "A>C>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "116",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 2,
+      "B>A>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "117",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "118",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>A>C": 3,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "118",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>A>C": 3,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "119",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "A>C>B": 2,
+      "A>B>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "120",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "C>B>A": 1,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "120",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "C>B>A": 1,
+      "C>A>B": 2
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "120",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "C>B>A": 1,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "121",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "121",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "121",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "122",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "123",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "124",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "125",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>C>A": 4,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "126",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 1,
+      "C>A>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "126",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 1,
+      "C>A>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "126",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 1,
+      "C>A>B": 1,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "128",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "C>A>B": 1,
+      "B>C>A": 2
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "128",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "C>A>B": 1,
+      "B>C>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "128",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 2
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "C>A>B": 1,
+      "B>C>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "130",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 3,
+      "A": 1,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "130",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 3,
+      "A": 1,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "131",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "131",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "131",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 2,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "132",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "132",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "133",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "134",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "136",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "C>B>A": 1,
+      "C>A>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "136",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "A": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "C>B>A": 1,
+      "C>A>B": 3
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "137",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "C>B>A": 2,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "138",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 3,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "138",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 3,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "142",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 4
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "145",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 1,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "C>A>B": 2,
+      "B>C>A": 1,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "145",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 3,
+      "B": 1,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "C>A>B": 2,
+      "B>C>A": 1,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "145",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "B": 1,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "C>A>B": 2,
+      "B>C>A": 1,
+      "A>C>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "149",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "A": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "150",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "B>C>A": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "150",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "B>C>A": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "152",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "154",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 3,
+      "B>A>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "154",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>A>B": 1,
+      "B>C>A": 3,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "155",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>C>B": 4,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "156",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "156",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 2,
+      "C>B>A": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "157",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "157",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "B": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 2,
+      "B>A>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "158",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "159",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>A>C": 3,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "159",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 1,
+      "B": 4
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "B>A>C": 3,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "161",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 2,
+      "C>A>B": 2
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "161",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 2,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "161",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 3,
+      "C": 2
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 2,
+      "C>A>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "162",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "A>C>B": 1,
+      "C>A>B": 4
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "163",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "164",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "164",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "164",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "B>A>C": 1,
+      "C>B>A": 2,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "165",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>C>A": 4,
+      "B>A>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "166",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "169",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "170",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "171",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 1,
+      "C>A>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "171",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 2,
+      "C": 3
+    },
+    "ranking_votes": {
+      "A>B>C": 1,
+      "A>C>B": 1,
+      "C>A>B": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "174",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "B": 2,
+      "A": 2,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "174",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 2,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "174",
+    "model": "openai__gpt-5.2",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "B": 2,
+      "A": 2,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>C>B": 1,
+      "A>B>C": 1,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "175",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "175",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 2,
+      "A": 3
+    },
+    "ranking_votes": {
+      "B>A>C": 2,
+      "A>B>C": 3
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "176",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "C": 2,
+      "B": 2,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 2,
+      "B>A>C": 2,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "178",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 1,
+      "A": 3,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>B>C": 3,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "178",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 1,
+      "A": 3,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>B>A": 1,
+      "A>B>C": 3,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "179",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "A>C>B": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "179",
+    "model": "openai__gpt-5.2",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 1,
+      "A": 4
+    },
+    "ranking_votes": {
+      "B>C>A": 1,
+      "A>C>B": 3,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "180",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "A>C>B": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "180",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "A>C>B": 1,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "182",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "183",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "184",
+    "model": "anthropic__claude-sonnet-4.6",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "C>A>B": 3,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "184",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 1,
+      "C": 4
+    },
+    "ranking_votes": {
+      "B>A>C": 1,
+      "C>A>B": 3,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "185",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>B>A": 4,
+      "C>A>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "188",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "188",
+    "model": "openai__gpt-5.2",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "B>A>C": 3,
+      "A>B>C": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "189",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "C",
+    "ranking": "C>A>B",
+    "top1_votes": {
+      "A": 3,
+      "C": 1,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 3,
+      "C>A>B": 1,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "189",
+    "model": "openai__gpt-5.2",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "A": 3,
+      "C": 1,
+      "B": 1
+    },
+    "ranking_votes": {
+      "A>C>B": 3,
+      "C>A>B": 1,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "190",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>A>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "B>A>C": 1,
+      "A>B>C": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "190",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>B>C",
+    "top1_votes": {
+      "B": 4,
+      "A": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 3,
+      "B>A>C": 1,
+      "A>B>C": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "191",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "194",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "B": 4,
+      "C": 1
+    },
+    "ranking_votes": {
+      "B>C>A": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "195",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "C": 4,
+      "B": 1
+    },
+    "ranking_votes": {
+      "C>A>B": 2,
+      "B>C>A": 1,
+      "C>B>A": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "196",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "C",
+    "ranking": "C>B>A",
+    "top1_votes": {
+      "C": 5
+    },
+    "ranking_votes": {
+      "C>A>B": 4,
+      "C>B>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "198",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "A": 5
+    },
+    "ranking_votes": {
+      "A>B>C": 4,
+      "A>C>B": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  },
+  {
+    "id": "199",
+    "model": "deepseek__deepseek-v4-flash",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "A>C>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "199",
+    "model": "moonshotai__kimi-k2.5",
+    "top1": "A",
+    "ranking": "A>C>B",
+    "top1_votes": {
+      "C": 3,
+      "A": 2
+    },
+    "ranking_votes": {
+      "C>A>B": 3,
+      "A>C>B": 2
+    },
+    "is_top1_minority": true,
+    "is_unique_full_ranking": false
+  },
+  {
+    "id": "200",
+    "model": "google__gemini-3-flash-preview",
+    "top1": "B",
+    "ranking": "B>C>A",
+    "top1_votes": {
+      "B": 5
+    },
+    "ranking_votes": {
+      "B>A>C": 4,
+      "B>C>A": 1
+    },
+    "is_top1_minority": false,
+    "is_unique_full_ranking": true
+  }
+]

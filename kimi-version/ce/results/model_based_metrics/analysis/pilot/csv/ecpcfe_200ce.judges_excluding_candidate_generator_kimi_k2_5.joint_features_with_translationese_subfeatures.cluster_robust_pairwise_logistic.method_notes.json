@@ -1,0 +1,45 @@
+{
+  "version": "kimi-version",
+  "direction": "CE",
+  "candidate_generator": "Kimi K2.5",
+  "excluded_judge_model": "moonshotai__kimi-k2.5",
+  "included_judge_models": [
+    "anthropic__claude-sonnet-4.6",
+    "deepseek__deepseek-v4-flash",
+    "google__gemini-3-flash-preview",
+    "openai__gpt-5.2"
+  ],
+  "model": "same joint model as the composite analysis, but the weighted translationese_score is replaced by independent translationese diagnostic subfeatures",
+  "cluster": "sample_id",
+  "accuracy_field": "in-sample accuracy; this is explanatory fit, not held-out prediction accuracy",
+  "translationese_subfeatures": [
+    "target_function_word_density",
+    "target_passive_density",
+    "target_pronoun_subject_ratio",
+    "target_explicit_connective_density",
+    "target_nominalization_suffix_density",
+    "target_avg_sentence_length"
+  ],
+  "features": [
+    "crosslingual_embedding_similarity",
+    "bidirectional_entailment",
+    "nli_boundary_risk",
+    "nli_omission_risk",
+    "nli_contradiction_risk",
+    "dependency_depth",
+    "mean_dependency_distance",
+    "normalized_dependency_distance",
+    "sentence_compression_ratio",
+    "extra_number_ratio",
+    "extra_entity_count",
+    "register_score",
+    "target_lm_naturalness_score",
+    "target_function_word_density",
+    "target_passive_density",
+    "target_pronoun_subject_ratio",
+    "target_explicit_connective_density",
+    "target_nominalization_suffix_density",
+    "target_avg_sentence_length"
+  ],
+  "l2": 0.01
+}

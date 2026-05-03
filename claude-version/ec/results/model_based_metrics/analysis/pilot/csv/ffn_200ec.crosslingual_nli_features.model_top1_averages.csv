@@ -1,0 +1,6 @@
+﻿model,n,top_A,top_B,top_C,avg_forward_entailment,avg_forward_neutral,avg_forward_contradiction,avg_backward_entailment,avg_backward_neutral,avg_backward_contradiction,avg_bidirectional_entailment,avg_nli_boundary_risk,avg_nli_omission_risk,avg_nli_contradiction_risk,avg_semantic_fidelity_score
+anthropic__claude-sonnet-4.6,200,48,83,69,0.964183,0.032244,0.003573,0.958806,0.030681,0.010513,0.936452,0.035817,0.041194,0.010789,0.950706
+deepseek__deepseek-v4-flash,200,72,81,47,0.97772,0.017213,0.005067,0.960608,0.030855,0.008537,0.944888,0.02228,0.039392,0.01141,0.957754
+google__gemini-3-flash-preview,200,65,71,64,0.964635,0.03181,0.003555,0.957812,0.031827,0.010361,0.93599,0.035365,0.042188,0.010637,0.950587
+moonshotai__kimi-k2.5,200,63,79,58,0.964526,0.031898,0.003576,0.953227,0.036157,0.010615,0.931438,0.035474,0.046773,0.01089,0.947986
+openai__gpt-5.2,200,62,73,65,0.964646,0.031795,0.00356,0.959439,0.030169,0.010393,0.937617,0.035354,0.040561,0.010668,0.951374

@@ -1,0 +1,1762 @@
+[
+  {
+    "organized_path": "data/organized_analysis_outputs/01_human_reference_alignment/human_reference_top1_by_judge.csv",
+    "source_path": "generated",
+    "version": "",
+    "direction": "",
+    "category": "01_human_reference_alignment",
+    "note": "Human reference top-1 alignment statistics."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/01_human_reference_alignment/human_reference_top1_by_sample.csv",
+    "source_path": "generated",
+    "version": "",
+    "direction": "",
+    "category": "01_human_reference_alignment",
+    "note": "Human reference top-1 alignment statistics."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/01_human_reference_alignment/human_reference_top1_by_sample.json",
+    "source_path": "generated",
+    "version": "",
+    "direction": "",
+    "category": "01_human_reference_alignment",
+    "note": "Human reference top-1 alignment statistics."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/01_human_reference_alignment/human_reference_top1_by_self_excluded_judge_set.csv",
+    "source_path": "generated",
+    "version": "",
+    "direction": "",
+    "category": "01_human_reference_alignment",
+    "note": "Human reference top-1 alignment statistics."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.condorcet_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.condorcet_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.consensus_borda_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.consensus_borda_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.high_disagreement_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.high_disagreement_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.minority_model_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.minority_model_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.model_vs_consensus_agreement.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.model_vs_consensus_agreement.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.pairwise_agreement.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.pairwise_agreement.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.top1_average_features.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.top1_average_features.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.top1_entropy_layer_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.top1_entropy_layer_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.top1_entropy_layers.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.top1_entropy_layers.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.condorcet_detail.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.condorcet_detail.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.consensus_borda.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.consensus_borda.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.high_disagreement_samples.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.high_disagreement_samples.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.minority_model_events.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.minority_model_events.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__EC__ffn_200ec.all_judges_5model.pairwise_judgments.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.pairwise_judgments.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.condorcet_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.condorcet_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.consensus_borda_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.consensus_borda_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.high_disagreement_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.high_disagreement_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.minority_model_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.minority_model_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.model_vs_consensus_agreement.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.model_vs_consensus_agreement.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.pairwise_agreement.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.pairwise_agreement.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.top1_entropy_layer_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.top1_entropy_layer_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.top1_entropy_layers.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.four_models.top1_entropy_layers.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.condorcet_detail.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.four_models.condorcet_detail.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.consensus_borda.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.four_models.consensus_borda.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.high_disagreement_samples.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.four_models.high_disagreement_samples.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.minority_model_events.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.four_models.minority_model_events.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__EC__ffn_200ec.legacy_four_judges_not_self_excluded.pairwise_judgments.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.four_models.pairwise_judgments.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda_summary.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda_summary.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.model_vs_consensus_agreement.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.model_vs_consensus_agreement.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.pairwise_agreement.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.pairwise_agreement.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features.pairwise_observations.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features.pairwise_observations.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.judge_set_metadata.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.judge_set_metadata.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__EC__ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.pairwise_judgments.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_kimi_k2_5.pairwise_judgments.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.gemini_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.gemini_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.gemini_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.gemini_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__EC__ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/kimi-version__EC__ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/kimi-version__EC__ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/kimi-version__EC__ffn_200ec.deep_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ec/results/rule_based_proxy_features/analysis/pilot/csv/ffn_200ec.deep_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/kimi-version__EC__ffn_200ec.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ec/results/rule_based_proxy_features/analysis/pilot/csv/ffn_200ec.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__EC__ffn_200ec.crosslingual_nli_features.by_candidate.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.crosslingual_nli_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__EC__ffn_200ec.gemini_embedding_features.by_candidate.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.gemini_embedding_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__EC__ffn_200ec.local_embedding_features.by_candidate.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.local_embedding_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__EC__ffn_200ec.target_lm_features.by_candidate.json",
+    "source_path": "kimi-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.target_lm_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/parser_syntax_features/kimi-version__EC__ffn_200ec.syntax_info_features.by_candidate.json",
+    "source_path": "kimi-version/ec/results/parser_derived_syntactic_metrics/analysis/pilot/json/ffn_200ec.syntax_info_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/parser_syntax_features",
+    "note": "Per-candidate parser-derived syntax feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/rule_based_proxy_features/kimi-version__EC__ffn_200ec.deep_features.by_candidate.json",
+    "source_path": "kimi-version/ec/results/rule_based_proxy_features/analysis/pilot/json/ffn_200ec.deep_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/rule_based_proxy_features",
+    "note": "Per-candidate rule-based proxy feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.condorcet_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.condorcet_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.consensus_borda_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.consensus_borda_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.high_disagreement_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.high_disagreement_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.minority_model_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.minority_model_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.model_vs_consensus_agreement.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.model_vs_consensus_agreement.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.pairwise_agreement.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.pairwise_agreement.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.top1_average_features.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.top1_average_features.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.top1_entropy_layer_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.top1_entropy_layer_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.top1_entropy_layers.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.top1_entropy_layers.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.condorcet_detail.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.condorcet_detail.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.consensus_borda.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.consensus_borda.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.high_disagreement_samples.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.high_disagreement_samples.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.minority_model_events.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.minority_model_events.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/kimi-version__CE__ecpcfe_200ce.all_judges_5model.pairwise_judgments.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.pairwise_judgments.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.condorcet_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.condorcet_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.consensus_borda_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.consensus_borda_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.high_disagreement_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.high_disagreement_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.minority_model_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.minority_model_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.model_vs_consensus_agreement.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.model_vs_consensus_agreement.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.pairwise_agreement.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.pairwise_agreement.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.top1_entropy_layer_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.top1_entropy_layer_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.top1_entropy_layers.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.four_models.top1_entropy_layers.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.condorcet_detail.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.four_models.condorcet_detail.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.consensus_borda.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.four_models.consensus_borda.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.high_disagreement_samples.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.four_models.high_disagreement_samples.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.minority_model_events.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.four_models.minority_model_events.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded/kimi-version__CE__ecpcfe_200ce.legacy_four_judges_not_self_excluded.pairwise_judgments.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.four_models.pairwise_judgments.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/legacy_four_judges_not_self_excluded",
+    "note": "Historical four_models outputs; not a valid self-exclusion set for Kimi."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda_summary.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda_summary.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.model_vs_consensus_agreement.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.model_vs_consensus_agreement.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.pairwise_agreement.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.pairwise_agreement.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.consensus_borda.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features.pairwise_observations.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features.pairwise_observations.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.judge_set_metadata.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.judge_set_metadata.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/kimi-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.pairwise_judgments.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_kimi_k2_5.pairwise_judgments.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/kimi-version__CE__ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/kimi-version__CE__ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/kimi-version__CE__ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/kimi-version__CE__ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "kimi-version/ce/results/rule_based_proxy_features/analysis/pilot/csv/ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.csv",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/kimi-version__CE__ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "kimi-version/ce/results/rule_based_proxy_features/analysis/pilot/csv/ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__CE__ecpcfe_200ce.crosslingual_nli_features.by_candidate.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.crosslingual_nli_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__CE__ecpcfe_200ce.local_embedding_features.by_candidate.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.local_embedding_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/kimi-version__CE__ecpcfe_200ce.target_lm_features.by_candidate.json",
+    "source_path": "kimi-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.target_lm_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/parser_syntax_features/kimi-version__CE__ecpcfe_200ce.syntax_info_features.by_candidate.json",
+    "source_path": "kimi-version/ce/results/parser_derived_syntactic_metrics/analysis/pilot/json/ecpcfe_200ce.syntax_info_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/parser_syntax_features",
+    "note": "Per-candidate parser-derived syntax feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/rule_based_proxy_features/kimi-version__CE__ecpcfe_200ce.deep_features.by_candidate.json",
+    "source_path": "kimi-version/ce/results/rule_based_proxy_features/analysis/pilot/json/ecpcfe_200ce.deep_features.by_candidate.json",
+    "version": "kimi-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/rule_based_proxy_features",
+    "note": "Per-candidate rule-based proxy feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.condorcet_summary.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.condorcet_summary.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.consensus_borda_summary.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.consensus_borda_summary.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.high_disagreement_summary.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.high_disagreement_summary.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.minority_model_summary.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.minority_model_summary.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.model_vs_consensus_agreement.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.model_vs_consensus_agreement.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.pairwise_agreement.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.pairwise_agreement.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.top1_average_features.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.top1_average_features.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.top1_entropy_layer_summary.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.top1_entropy_layer_summary.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.top1_entropy_layers.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.five_models.top1_entropy_layers.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.condorcet_detail.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.condorcet_detail.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.consensus_borda.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.consensus_borda.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.high_disagreement_samples.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.high_disagreement_samples.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.minority_model_events.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.minority_model_events.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__EC__ffn_200ec.all_judges_5model.pairwise_judgments.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.five_models.pairwise_judgments.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda_summary.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda_summary.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.model_vs_consensus_agreement.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.model_vs_consensus_agreement.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_agreement.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_agreement.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.pairwise_observations.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.pairwise_observations.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.judge_set_metadata.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.judge_set_metadata.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__EC__ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_judgments.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_judgments.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__EC__ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/csv/ffn_200ec.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/claude-version__EC__ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/claude-version__EC__ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ffn_200ec.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/claude-version__EC__ffn_200ec.deep_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ec/results/rule_based_proxy_features/analysis/pilot/csv/ffn_200ec.deep_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/claude-version__EC__ffn_200ec.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ec/results/rule_based_proxy_features/analysis/pilot/csv/ffn_200ec.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/claude-version__EC__ffn_200ec.crosslingual_nli_features.by_candidate.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.crosslingual_nli_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/claude-version__EC__ffn_200ec.local_embedding_features.by_candidate.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.local_embedding_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/claude-version__EC__ffn_200ec.target_lm_features.by_candidate.json",
+    "source_path": "claude-version/ec/results/model_based_metrics/analysis/pilot/json/ffn_200ec.target_lm_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/parser_syntax_features/claude-version__EC__ffn_200ec.syntax_info_features.by_candidate.json",
+    "source_path": "claude-version/ec/results/parser_derived_syntactic_metrics/analysis/pilot/json/ffn_200ec.syntax_info_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/parser_syntax_features",
+    "note": "Per-candidate parser-derived syntax feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/rule_based_proxy_features/claude-version__EC__ffn_200ec.deep_features.by_candidate.json",
+    "source_path": "claude-version/ec/results/rule_based_proxy_features/analysis/pilot/json/ffn_200ec.deep_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "EC",
+    "category": "05_feature_matrices/rule_based_proxy_features",
+    "note": "Per-candidate rule-based proxy feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.condorcet_summary.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.condorcet_summary.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.consensus_borda_summary.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.consensus_borda_summary.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.high_disagreement_summary.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.high_disagreement_summary.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.minority_model_summary.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.minority_model_summary.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.model_vs_consensus_agreement.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.model_vs_consensus_agreement.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.pairwise_agreement.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.pairwise_agreement.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.top1_average_features.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.top1_average_features.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.top1_entropy_layer_summary.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.top1_entropy_layer_summary.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.top1_entropy_layers.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.five_models.top1_entropy_layers.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.condorcet_detail.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.condorcet_detail.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.consensus_borda.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.consensus_borda.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.high_disagreement_samples.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.high_disagreement_samples.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.minority_model_events.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.minority_model_events.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/02_judge_agreement_and_consensus/all_judges_5model/claude-version__CE__ecpcfe_200ce.all_judges_5model.pairwise_judgments.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.five_models.pairwise_judgments.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "02_judge_agreement_and_consensus/all_judges_5model",
+    "note": "Legacy five_models renamed to all_judges_5model."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda_summary.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda_summary.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.model_vs_consensus_agreement.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.model_vs_consensus_agreement.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_agreement.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_agreement.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.consensus_borda.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.pairwise_observations.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features.pairwise_observations.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.joint_features_with_translationese_subfeatures.pairwise_observations.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.judge_set_metadata.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.judge_set_metadata.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/03_self_excluded_judge_sets/claude-version__CE__ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_judgments.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.judges_excluding_candidate_generator_claude_sonnet_4_6.pairwise_judgments.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "03_self_excluded_judge_sets",
+    "note": "Judge set excluding the candidate generator itself."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.crosslingual_nli_features.univariate_cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.joint_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.all_judges_5model.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.joint_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.local_embedding_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/model_based_all_judges/claude-version__CE__ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/csv/ecpcfe_200ce.target_lm_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/model_based_all_judges",
+    "note": "Cluster-robust model-based regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/claude-version__CE__ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/parser_syntax/claude-version__CE__ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/parser_derived_syntactic_metrics/analysis/pilot/csv/ecpcfe_200ce.syntax_info_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/parser_syntax",
+    "note": "Cluster-robust parser-derived syntax regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/claude-version__CE__ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.csv",
+    "source_path": "claude-version/ce/results/rule_based_proxy_features/analysis/pilot/csv/ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.csv",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/04_cluster_robust_regressions/rule_based_proxy/claude-version__CE__ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "source_path": "claude-version/ce/results/rule_based_proxy_features/analysis/pilot/csv/ecpcfe_200ce.deep_features.cluster_robust_pairwise_logistic.method_notes.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "04_cluster_robust_regressions/rule_based_proxy",
+    "note": "Cluster-robust rule-based proxy regression output."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/claude-version__CE__ecpcfe_200ce.crosslingual_nli_features.by_candidate.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.crosslingual_nli_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/claude-version__CE__ecpcfe_200ce.local_embedding_features.by_candidate.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.local_embedding_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/model_based_features/claude-version__CE__ecpcfe_200ce.target_lm_features.by_candidate.json",
+    "source_path": "claude-version/ce/results/model_based_metrics/analysis/pilot/json/ecpcfe_200ce.target_lm_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/model_based_features",
+    "note": "Per-candidate model-based feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/parser_syntax_features/claude-version__CE__ecpcfe_200ce.syntax_info_features.by_candidate.json",
+    "source_path": "claude-version/ce/results/parser_derived_syntactic_metrics/analysis/pilot/json/ecpcfe_200ce.syntax_info_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/parser_syntax_features",
+    "note": "Per-candidate parser-derived syntax feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/05_feature_matrices/rule_based_proxy_features/claude-version__CE__ecpcfe_200ce.deep_features.by_candidate.json",
+    "source_path": "claude-version/ce/results/rule_based_proxy_features/analysis/pilot/json/ecpcfe_200ce.deep_features.by_candidate.json",
+    "version": "claude-version",
+    "direction": "CE",
+    "category": "05_feature_matrices/rule_based_proxy_features",
+    "note": "Per-candidate rule-based proxy feature matrix."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/06_stability_and_review_summaries/self_excluded_judge_set_feature_stability_tiers.csv",
+    "source_path": "data/analysis_summaries/self_excluded_judge_set_feature_stability_tiers.csv",
+    "version": "",
+    "direction": "",
+    "category": "06_stability_and_review_summaries",
+    "note": "Cross-version/direction stability summary or review note."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/06_stability_and_review_summaries/self_excluded_judge_set_findings.md",
+    "source_path": "data/analysis_summaries/self_excluded_judge_set_findings.md",
+    "version": "",
+    "direction": "",
+    "category": "06_stability_and_review_summaries",
+    "note": "Cross-version/direction stability summary or review note."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/06_stability_and_review_summaries/self_excluded_judge_set_translationese_subfeature_stability_tiers.csv",
+    "source_path": "data/analysis_summaries/self_excluded_judge_set_translationese_subfeature_stability_tiers.csv",
+    "version": "",
+    "direction": "",
+    "category": "06_stability_and_review_summaries",
+    "note": "Cross-version/direction stability summary or review note."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/07_native_baseline_syntax/stanza_native_syntax_baseline_stats.csv",
+    "source_path": "data/external_baselines/stanza_native_syntax_baseline_stats.csv",
+    "version": "",
+    "direction": "",
+    "category": "07_native_baseline_syntax",
+    "note": "Native finance baseline syntax comparison."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/07_native_baseline_syntax/stanza_native_syntax_baseline_stats.json",
+    "source_path": "data/external_baselines/stanza_native_syntax_baseline_stats.json",
+    "version": "",
+    "direction": "",
+    "category": "07_native_baseline_syntax",
+    "note": "Native finance baseline syntax comparison."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/07_native_baseline_syntax/stanza_native_syntax_candidate_comparison_overview.csv",
+    "source_path": "data/external_baselines/stanza_native_syntax_candidate_comparison_overview.csv",
+    "version": "",
+    "direction": "",
+    "category": "07_native_baseline_syntax",
+    "note": "Native finance baseline syntax comparison."
+  },
+  {
+    "organized_path": "data/organized_analysis_outputs/07_native_baseline_syntax/STANZA_NATIVE_SYNTAX_METHOD_NOTES.md",
+    "source_path": "data/external_baselines/STANZA_NATIVE_SYNTAX_METHOD_NOTES.md",
+    "version": "",
+    "direction": "",
+    "category": "07_native_baseline_syntax",
+    "note": "Native finance baseline syntax comparison."
+  }
+]

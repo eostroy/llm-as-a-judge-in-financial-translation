@@ -1,0 +1,15 @@
+{
+  "input_coefficients": "claude-version\\ec\\results\\model_based_metrics\\analysis\\pilot\\csv\\ffn_200ec.target_lm_features.pairwise_logistic_preferences.csv",
+  "input_features": "claude-version\\ec\\results\\model_based_metrics\\analysis\\pilot\\json\\ffn_200ec.target_lm_features.by_candidate.json",
+  "ranking_files": "same judge ranking JSON files used by the original analysis",
+  "model": "standardized L2 pairwise logistic regression refit from candidate-level features",
+  "model_type": "feature_family_multivariate",
+  "cluster": "sample_id",
+  "standard_error": "cluster-robust sandwich covariance with finite-sample correction",
+  "interpretation": "use p_cluster and ci95_low/high when discussing statistical support; coefficients remain descriptive associations, not causal effects",
+  "l2": 0.01,
+  "features": [
+    "target_lm_log_perplexity",
+    "target_lm_naturalness_score"
+  ]
+}

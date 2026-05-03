@@ -1,0 +1,6 @@
+﻿model,n,top_A,top_B,top_C,avg_target_lm_log_perplexity,avg_target_lm_naturalness_score
+anthropic__claude-sonnet-4.6,200,45,83,72,2.592635,-2.592635
+deepseek__deepseek-v4-flash,200,73,77,50,2.607075,-2.607075
+google__gemini-3-flash-preview,200,69,69,62,2.609971,-2.609971
+moonshotai__kimi-k2.5,200,72,78,50,2.60327,-2.60327
+openai__gpt-5.2,200,70,70,60,2.592811,-2.592811

@@ -1,0 +1,11 @@
+﻿model_1,model_2,same_pairwise_judgments,different_pairwise_judgments,total_pairwise_judgments,agreement
+anthropic__claude-sonnet-4.6,deepseek__deepseek-v4-flash,496,104,600,0.826667
+anthropic__claude-sonnet-4.6,google__gemini-3-flash-preview,511,89,600,0.851667
+anthropic__claude-sonnet-4.6,moonshotai__kimi-k2.5,501,99,600,0.835
+anthropic__claude-sonnet-4.6,openai__gpt-5.2,485,115,600,0.808333
+deepseek__deepseek-v4-flash,google__gemini-3-flash-preview,507,93,600,0.845
+deepseek__deepseek-v4-flash,moonshotai__kimi-k2.5,513,87,600,0.855
+deepseek__deepseek-v4-flash,openai__gpt-5.2,493,107,600,0.821667
+google__gemini-3-flash-preview,moonshotai__kimi-k2.5,512,88,600,0.853333
+google__gemini-3-flash-preview,openai__gpt-5.2,490,110,600,0.816667
+moonshotai__kimi-k2.5,openai__gpt-5.2,508,92,600,0.846667

@@ -1,0 +1,14 @@
+{
+  "version": "claude-version",
+  "direction": "EC",
+  "candidate_generator": "Claude Sonnet 4.6",
+  "excluded_judge_model": "anthropic__claude-sonnet-4.6",
+  "included_judge_models": [
+    "deepseek__deepseek-v4-flash",
+    "google__gemini-3-flash-preview",
+    "moonshotai__kimi-k2.5",
+    "openai__gpt-5.2"
+  ],
+  "n_included_judges": 4,
+  "filename_prefix": "ffn_200ec.judges_excluding_candidate_generator_claude_sonnet_4_6"
+}

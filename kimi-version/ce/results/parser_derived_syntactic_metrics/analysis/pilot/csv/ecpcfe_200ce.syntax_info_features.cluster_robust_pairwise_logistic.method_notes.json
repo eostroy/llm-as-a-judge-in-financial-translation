@@ -1,0 +1,23 @@
+{
+  "input_coefficients": "kimi-version\\ce\\results\\parser_derived_syntactic_metrics\\analysis\\pilot\\csv\\ecpcfe_200ce.syntax_info_features.pairwise_logistic_preferences.csv",
+  "input_features": "kimi-version\\ce\\results\\parser_derived_syntactic_metrics\\analysis\\pilot\\json\\ecpcfe_200ce.syntax_info_features.by_candidate.json",
+  "ranking_files": "same judge ranking JSON files used by the original analysis",
+  "model": "standardized L2 pairwise logistic regression refit from candidate-level features",
+  "model_type": "feature_family_multivariate",
+  "cluster": "sample_id",
+  "standard_error": "cluster-robust sandwich covariance with finite-sample correction",
+  "interpretation": "use p_cluster and ci95_low/high when discussing statistical support; coefficients remain descriptive associations, not causal effects",
+  "l2": 0.01,
+  "features": [
+    "clause_count",
+    "dependency_depth",
+    "mean_dependency_distance",
+    "max_dependency_distance",
+    "normalized_dependency_distance",
+    "nominalization_ratio",
+    "modifier_density",
+    "coordination_count",
+    "passive_count",
+    "sentence_compression_ratio"
+  ]
+}

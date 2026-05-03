@@ -1,0 +1,7 @@
+﻿model_a,model_b,pairwise_agreement,n_pairwise_comparisons
+anthropic__claude-sonnet-4.6,deepseek__deepseek-v4-flash,0.826667,600
+anthropic__claude-sonnet-4.6,google__gemini-3-flash-preview,0.851667,600
+anthropic__claude-sonnet-4.6,openai__gpt-5.2,0.808333,600
+deepseek__deepseek-v4-flash,google__gemini-3-flash-preview,0.845,600
+deepseek__deepseek-v4-flash,openai__gpt-5.2,0.821667,600
+google__gemini-3-flash-preview,openai__gpt-5.2,0.816667,600

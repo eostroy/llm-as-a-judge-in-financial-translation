@@ -1,0 +1,5 @@
+﻿version,direction,target_language,n,avg_sentence_length_native_z_mean,clause_count_native_z_mean,coordination_count_native_z_mean,dependency_depth_native_z_mean,mean_dependency_distance_native_z_mean,modifier_density_native_z_mean,nominalization_ratio_native_z_mean,normalized_dependency_distance_native_z_mean,passive_count_native_z_mean,passive_or_beishi_count_native_z_mean
+kimi-version,EC,zh,600,0.244533317,3.556866741,0.931852294,1.064838222,0.323488275,0.215960846,-0.180209404,-2.172400294,,1.833378867
+kimi-version,CE,en,600,-0.093680097,3.123347815,1.498657506,0.715484,0.015933399,-0.278144119,-0.336629562,-1.769681461,1.681752598,
+claude-version,EC,zh,600,0.439970093,3.750686587,1.018066825,1.150212814,0.388761367,0.316843146,-0.154366305,-2.236530739,,1.94207097
+claude-version,CE,en,600,0.050009103,3.220006939,1.526561596,0.800165377,0.104318207,-0.172456456,-0.282736142,-1.811688643,2.062897697,

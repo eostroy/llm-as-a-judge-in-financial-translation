@@ -1,6 +1,0 @@
-﻿model,n,top_A,top_B,top_C,avg_crosslingual_embedding_similarity
-anthropic__claude-sonnet-4.6,200,49,84,67,0.939673
-deepseek__deepseek-v4-flash,200,71,80,49,0.939288
-google__gemini-3-flash-preview,200,50,82,68,0.939144
-moonshotai__kimi-k2.5,200,78,75,47,0.938647
-openai__gpt-5.2,200,44,86,70,0.939831

@@ -1,0 +1,6 @@
+﻿model,n,top_A,top_B,top_C,avg_extra_number_count,avg_extra_number_ratio,avg_extra_entity_count,avg_financial_register_score,avg_statistical_register_score,avg_register_score,avg_translationese_score
+anthropic__claude-sonnet-4.6,200,49,84,67,0.075,0.049056,2.495,0.503006,0.204777,0.368803,0.205503
+deepseek__deepseek-v4-flash,200,71,80,49,0.07,0.044056,2.45,0.512332,0.212653,0.377476,0.198046
+google__gemini-3-flash-preview,200,50,82,68,0.08,0.054056,2.5,0.502794,0.217961,0.374619,0.199771
+moonshotai__kimi-k2.5,200,78,75,47,0.08,0.047389,2.515,0.513888,0.232499,0.387263,0.198175
+openai__gpt-5.2,200,44,86,70,0.07,0.044056,2.49,0.517553,0.212856,0.380439,0.19713

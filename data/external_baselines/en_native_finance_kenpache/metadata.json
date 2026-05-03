@@ -1,0 +1,16 @@
+{
+  "dataset": "Kenpache/multilingual-financial-sentiment",
+  "dataset_url": "https://huggingface.co/datasets/Kenpache/multilingual-financial-sentiment",
+  "source_file_url": "https://huggingface.co/datasets/Kenpache/multilingual-financial-sentiment/resolve/main/all_languages_clean.csv",
+  "config": "default",
+  "split": "train",
+  "language_filter": "en",
+  "requested_limit": 5000,
+  "start_offset": 0,
+  "collected": 5000,
+  "scanned_rows": 5070,
+  "text_field": "sentence",
+  "notes": "Financial news/sentiment sentences; mojibake repaired with UTF-8 round-trip heuristics when needed.",
+  "retrieved_at_utc": "2026-05-02T10:20:23.922414+00:00",
+  "record_count": 5000
+}

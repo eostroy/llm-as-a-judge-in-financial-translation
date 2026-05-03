@@ -1,0 +1,24 @@
+{
+  "input_coefficients": "kimi-version\\ce\\results\\model_based_metrics\\analysis\\pilot\\csv\\ecpcfe_200ce.crosslingual_nli_features.univariate_pairwise_logistic_preferences.csv",
+  "input_features": "kimi-version\\ce\\results\\model_based_metrics\\analysis\\pilot\\json\\ecpcfe_200ce.crosslingual_nli_features.by_candidate.json",
+  "ranking_files": "same judge ranking JSON files used by the original analysis",
+  "model": "standardized L2 pairwise logistic regression refit from candidate-level features",
+  "model_type": "univariate",
+  "cluster": "sample_id",
+  "standard_error": "cluster-robust sandwich covariance with finite-sample correction",
+  "interpretation": "use p_cluster and ci95_low/high when discussing statistical support; coefficients remain descriptive associations, not causal effects",
+  "l2": 0.01,
+  "features": [
+    "forward_entailment",
+    "forward_neutral",
+    "forward_contradiction",
+    "backward_entailment",
+    "backward_neutral",
+    "backward_contradiction",
+    "bidirectional_entailment",
+    "nli_boundary_risk",
+    "nli_omission_risk",
+    "nli_contradiction_risk",
+    "semantic_fidelity_score"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿model,feature,standardized_coefficient,training_accuracy,intercept,n_pairwise_observations
+anthropic__claude-sonnet-4.6,target_lm_log_perplexity,-0.33849,0.566667,-0.089304,600
+anthropic__claude-sonnet-4.6,target_lm_naturalness_score,0.33849,0.566667,-0.089304,600
+deepseek__deepseek-v4-flash,target_lm_log_perplexity,-0.21061,0.581667,0.298606,600
+deepseek__deepseek-v4-flash,target_lm_naturalness_score,0.21061,0.581667,0.298606,600
+google__gemini-3-flash-preview,target_lm_log_perplexity,-0.248653,0.558333,-0.10847,600
+google__gemini-3-flash-preview,target_lm_naturalness_score,0.248653,0.558333,-0.10847,600
+moonshotai__kimi-k2.5,target_lm_log_perplexity,-0.261609,0.546667,0.142458,600
+moonshotai__kimi-k2.5,target_lm_naturalness_score,0.261609,0.546667,0.142458,600
+openai__gpt-5.2,target_lm_log_perplexity,-0.210883,0.585,0.250567,600
+openai__gpt-5.2,target_lm_naturalness_score,0.210883,0.585,0.250567,600

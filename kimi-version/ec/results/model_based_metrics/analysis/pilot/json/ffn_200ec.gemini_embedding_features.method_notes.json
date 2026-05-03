@@ -1,0 +1,8 @@
+[
+  {
+    "embedding_model": "google/gemini-embedding-2-preview",
+    "embedding_dimensions": 768,
+    "embedding_similarity": "cosine(source_text_embedding, candidate_embedding)",
+    "local_semantic_proxy_features": "removed from this embedding-based run"
+  }
+]

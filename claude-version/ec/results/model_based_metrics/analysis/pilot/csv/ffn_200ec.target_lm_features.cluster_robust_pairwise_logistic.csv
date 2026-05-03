@@ -1,0 +1,11 @@
+﻿model,feature,standardized_coefficient,cluster_robust_se,z_cluster,p_cluster,ci95_low,ci95_high,cluster_significant_05,training_accuracy,intercept,n_pairwise_observations,n_clusters,model_type
+anthropic__claude-sonnet-4.6,target_lm_log_perplexity,-0.33849,0.067924,-4.983396,1e-06,-0.47162,-0.20536,True,0.566667,-0.089304,600,200,feature_family_multivariate
+anthropic__claude-sonnet-4.6,target_lm_naturalness_score,0.33849,0.067924,4.983396,1e-06,0.20536,0.47162,True,0.566667,-0.089304,600,200,feature_family_multivariate
+deepseek__deepseek-v4-flash,target_lm_log_perplexity,-0.21061,0.054461,-3.867199,0.00011,-0.317353,-0.103867,True,0.581667,0.298606,600,200,feature_family_multivariate
+deepseek__deepseek-v4-flash,target_lm_naturalness_score,0.21061,0.054461,3.867199,0.00011,0.103867,0.317353,True,0.581667,0.298606,600,200,feature_family_multivariate
+google__gemini-3-flash-preview,target_lm_log_perplexity,-0.248653,0.057328,-4.337401,1.4e-05,-0.361015,-0.136291,True,0.558333,-0.10847,600,200,feature_family_multivariate
+google__gemini-3-flash-preview,target_lm_naturalness_score,0.248653,0.057328,4.337401,1.4e-05,0.136291,0.361015,True,0.558333,-0.10847,600,200,feature_family_multivariate
+moonshotai__kimi-k2.5,target_lm_log_perplexity,-0.261609,0.057083,-4.582949,5e-06,-0.373492,-0.149726,True,0.546667,0.142458,600,200,feature_family_multivariate
+moonshotai__kimi-k2.5,target_lm_naturalness_score,0.261609,0.057083,4.582949,5e-06,0.149726,0.373492,True,0.546667,0.142458,600,200,feature_family_multivariate
+openai__gpt-5.2,target_lm_log_perplexity,-0.210883,0.057678,-3.656228,0.000256,-0.323931,-0.097835,True,0.585,0.250567,600,200,feature_family_multivariate
+openai__gpt-5.2,target_lm_naturalness_score,0.210883,0.057678,3.656228,0.000256,0.097835,0.323931,True,0.585,0.250567,600,200,feature_family_multivariate

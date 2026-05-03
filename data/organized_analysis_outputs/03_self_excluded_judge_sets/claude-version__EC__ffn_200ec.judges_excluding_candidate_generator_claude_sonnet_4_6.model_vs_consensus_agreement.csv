@@ -1,0 +1,5 @@
+﻿model,top1_matches_consensus,exact_rank_matches_consensus,pairwise_matches_consensus,n_samples
+deepseek__deepseek-v4-flash,0.815,0.73,0.881667,200
+google__gemini-3-flash-preview,0.9,0.69,0.895,200
+moonshotai__kimi-k2.5,0.905,0.805,0.93,200
+openai__gpt-5.2,0.86,0.765,0.903333,200
