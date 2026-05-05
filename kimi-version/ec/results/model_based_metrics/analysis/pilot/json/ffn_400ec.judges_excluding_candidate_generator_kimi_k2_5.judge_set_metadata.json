@@ -1,0 +1,15 @@
+{
+  "version": "kimi-version",
+  "direction": "EC",
+  "candidate_generator": "Kimi K2.5",
+  "excluded_judge": "moonshotai__kimi-k2.5",
+  "included_judges": [
+    "anthropic__claude-sonnet-4.6",
+    "deepseek__deepseek-v4-flash",
+    "google__gemini-3-flash-preview",
+    "openai__gpt-5.2"
+  ],
+  "n_judges": 4,
+  "n_samples": 400,
+  "avg_pairwise_agreement": 0.829305
+}
