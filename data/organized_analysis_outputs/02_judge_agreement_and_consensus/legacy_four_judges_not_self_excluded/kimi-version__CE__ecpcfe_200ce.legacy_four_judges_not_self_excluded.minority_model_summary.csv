@@ -1,5 +1,0 @@
-﻿model,minority_events,top1_minority_events,unique_full_ranking_events,samples
-anthropic__claude-sonnet-4.6,41,28,41,200
-google__gemini-3-flash-preview,56,10,56,200
-moonshotai__kimi-k2.5,35,18,35,200
-openai__gpt-5.2,39,21,39,200

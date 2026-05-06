@@ -1,7 +1,0 @@
-﻿model_a,model_b,pairwise_agreement,n_pairwise
-anthropic__claude-sonnet-4.6,deepseek__deepseek-v4-flash,0.825833,1200
-anthropic__claude-sonnet-4.6,google__gemini-3-flash-preview,0.8475,1200
-anthropic__claude-sonnet-4.6,openai__gpt-5.2,0.8075,1200
-deepseek__deepseek-v4-flash,google__gemini-3-flash-preview,0.851667,1200
-deepseek__deepseek-v4-flash,openai__gpt-5.2,0.823333,1200
-google__gemini-3-flash-preview,openai__gpt-5.2,0.82,1200

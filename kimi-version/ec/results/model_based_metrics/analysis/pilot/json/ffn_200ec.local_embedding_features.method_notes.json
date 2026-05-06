@@ -1,9 +1,0 @@
-[
-  {
-    "embedding_model": "C:\\Users\\15332\\.cache\\huggingface\\local_models\\LaBSE",
-    "device": "cpu",
-    "embedding": "mean-pooled last hidden states with attention mask, L2-normalized",
-    "crosslingual_embedding_similarity": "cosine(source_text_embedding, candidate_embedding)",
-    "local_files_only": true
-  }
-]

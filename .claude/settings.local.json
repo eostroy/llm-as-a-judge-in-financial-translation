@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python *)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(Get-ChildItem -Recurse -Depth 3 \"C:\\\\Users\\\\15332\\\\Desktop\\\\llm-as-a-judge\\\\ec\")",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

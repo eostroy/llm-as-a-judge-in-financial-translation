@@ -1,6 +1,0 @@
-﻿model,feature,standardized_coefficient,training_accuracy,intercept,n_pairwise_observations
-anthropic__claude-sonnet-4.6,crosslingual_embedding_similarity,0.541107,0.561667,0.038854,600
-deepseek__deepseek-v4-flash,crosslingual_embedding_similarity,0.637338,0.61,0.253028,600
-google__gemini-3-flash-preview,crosslingual_embedding_similarity,0.469953,0.606667,-0.331216,600
-moonshotai__kimi-k2.5,crosslingual_embedding_similarity,0.456765,0.64,0.456224,600
-openai__gpt-5.2,crosslingual_embedding_similarity,0.648471,0.59,0.073219,600

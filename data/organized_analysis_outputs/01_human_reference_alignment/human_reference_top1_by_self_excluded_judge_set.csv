@@ -1,5 +1,0 @@
-﻿version,direction,dataset,judge_set,excluded_judge_model,included_judge_models,n_judges,mean_human_top1_rate,mean_human_top2_or_better_rate,mean_human_rank,random_top1_baseline
-kimi-version,EC,ffn_200ec,judges_excluding_candidate_generator_kimi_k2_5,moonshotai__kimi-k2.5,openai__gpt-5.2;google__gemini-3-flash-preview;anthropic__claude-sonnet-4.6;deepseek__deepseek-v4-flash,4,0.05625,0.3325,2.61125,0.333333
-kimi-version,CE,ecpcfe_200ce,judges_excluding_candidate_generator_kimi_k2_5,moonshotai__kimi-k2.5,openai__gpt-5.2;google__gemini-3-flash-preview;anthropic__claude-sonnet-4.6;deepseek__deepseek-v4-flash,4,0.10625,0.43,2.46375,0.333333
-claude-version,EC,ffn_200ec,judges_excluding_candidate_generator_claude_sonnet_4_6,anthropic__claude-sonnet-4.6,openai__gpt-5.2;google__gemini-3-flash-preview;moonshotai__kimi-k2.5;deepseek__deepseek-v4-flash,4,0.3275,0.73375,1.93875,0.333333
-claude-version,CE,ecpcfe_200ce,judges_excluding_candidate_generator_claude_sonnet_4_6,anthropic__claude-sonnet-4.6,openai__gpt-5.2;google__gemini-3-flash-preview;moonshotai__kimi-k2.5;deepseek__deepseek-v4-flash,4,0.29875,0.6775,2.02375,0.333333
