@@ -1,0 +1,64 @@
+[
+  {
+    "sample_id": 1,
+    "index": 0,
+    "source_text": "Figures released by the National Bureau of Statistics showed China's value-added industrial output - a gauge of activity in the manufacturing, mining and utilities sectors - grew by 6.6 percent from a year earlier in November, up from the 4.6 percent rise in October.Retail sales, a key measurement of consumer spending, grew by 10.1 percent year-on-year in November, up from the 7.6 percent growth in October.",
+    "variants": [
+      {
+        "id": "A",
+        "feature_target": "baseline_balanced",
+        "translation": "国家统计局公布的数据显示，中国工业增加值——衡量制造业、采矿业和公用事业活动的指标——11月同比增长6.6%，高于10月4.6%的增速。衡量消费支出的关键指标社会消费品零售总额11月同比增长10.1%，高于10月7.6%的增速。"
+      },
+      {
+        "id": "B",
+        "feature_target": "source_syntax_preserving",
+        "translation": "国家统计局发布的数据显示，中国工业增加值——衡量制造业、采矿业和公用事业领域活动的指标——11月同比增长6.6%，高于10月6.6%的增幅，较10月4.6%的增速有所回升。零售额作为衡量消费支出的关键指标，11月同比增长10.1%，高于10月7.6%的增速。"
+      },
+      {
+        "id": "C",
+        "feature_target": "target_language_restructured",
+        "translation": "根据国家统计局发布的数据，11月份，中国工业增加值同比增长6.6%，较10月份4.6%的增速明显加快；该指标是衡量制造业、采矿业和公用事业活动的重要参考。11月份，反映消费支出状况的关键指标社会消费品零售总额同比增长10.1%，较10月份7.6%的增速进一步提升。"
+      },
+      {
+        "id": "D",
+        "feature_target": "cohesion_explicit",
+        "translation": "国家统计局公布的数据显示，作为衡量制造业、采矿业和公用事业活动的重要指标，中国工业增加值11月同比增长6.6%，较10月4.6%的增速明显回升。与此同时，作为衡量消费支出的关键指标，社会消费品零售总额11月同比增长10.1%，同样高于10月7.6%的增速，两项数据均呈现加速增长态势。"
+      },
+      {
+        "id": "E",
+        "feature_target": "formal_register",
+        "translation": "国家统计局发布的统计数据显示，11月份，中国工业增加值同比增长6.6%，较上月4.6%的增速明显提升；该指标是反映制造业、采矿业及公用事业领域生产活动的重要量化参数。衡量居民消费支出水平的核心指标社会消费品零售总额，11月同比增长10.1%，亦高于10月7.6%的增速。"
+      },
+      {
+        "id": "F",
+        "feature_target": "information_unpacking",
+        "translation": "国家统计局公布的数据显示，11月中国工业增加值同比增长6.6%。工业增加值是衡量制造业、采矿业和公用事业活动的重要指标，该增速高于10月份4.6%的同比涨幅。社会消费品零售总额是衡量消费支出的关键指标，11月同比增长10.1%，高于10月份7.6%的增速。"
+      }
+    ],
+    "model_used": "anthropic/claude-4.6-sonnet-20260217",
+    "usage": {
+      "prompt_tokens": 1241,
+      "completion_tokens": 994,
+      "total_tokens": 2235,
+      "cost": 0.018633,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.018633,
+        "upstream_inference_prompt_cost": 0.003723,
+        "upstream_inference_completions_cost": 0.01491
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "generation_round": 1
+  }
+]

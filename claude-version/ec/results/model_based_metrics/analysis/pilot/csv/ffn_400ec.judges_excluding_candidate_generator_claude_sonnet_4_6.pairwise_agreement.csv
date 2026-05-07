@@ -1,7 +1,0 @@
-﻿model_a,model_b,pairwise_agreement,n_pairwise
-deepseek__deepseek-v4-flash,google__gemini-3-flash-preview,0.835833,1200
-deepseek__deepseek-v4-flash,moonshotai__kimi-k2.5,0.863333,1200
-deepseek__deepseek-v4-flash,openai__gpt-5.2,0.804167,1200
-google__gemini-3-flash-preview,moonshotai__kimi-k2.5,0.879167,1200
-google__gemini-3-flash-preview,openai__gpt-5.2,0.836667,1200
-moonshotai__kimi-k2.5,openai__gpt-5.2,0.840833,1200

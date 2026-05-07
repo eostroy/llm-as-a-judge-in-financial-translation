@@ -1,6 +1,0 @@
-﻿model,feature,standardized_coefficient,cluster_robust_se,z_cluster,p_cluster,ci95_low,ci95_high,cluster_significant_05,training_accuracy,intercept,n_pairwise_observations,n_clusters,model_type
-anthropic__claude-sonnet-4.6,crosslingual_embedding_similarity,0.171221,0.090169,1.898894,0.057578,-0.00551,0.347952,False,0.543333,-0.121037,600,200,feature_family_multivariate
-deepseek__deepseek-v4-flash,crosslingual_embedding_similarity,0.143317,0.094779,1.512118,0.130504,-0.04245,0.329084,False,0.566667,0.255938,600,200,feature_family_multivariate
-google__gemini-3-flash-preview,crosslingual_embedding_similarity,0.132328,0.088937,1.487884,0.136781,-0.041989,0.306645,False,0.495,-0.060296,600,200,feature_family_multivariate
-moonshotai__kimi-k2.5,crosslingual_embedding_similarity,0.108362,0.096684,1.120789,0.262378,-0.081138,0.297862,False,0.59,0.330551,600,200,feature_family_multivariate
-openai__gpt-5.2,crosslingual_embedding_similarity,0.285185,0.086301,3.304548,0.000951,0.116036,0.454334,True,0.621667,0.41968,600,200,feature_family_multivariate

@@ -1,6 +1,0 @@
-﻿model,samples,top1_matches_consensus,top1_agreement,exact_rank_matches_consensus,exact_rank_agreement,pairwise_matches_consensus,pairwise_total,pairwise_agreement
-anthropic__claude-sonnet-4.6,200,166,0.83,139,0.695,531,600,0.885
-deepseek__deepseek-v4-flash,200,179,0.895,155,0.775,549,600,0.915
-google__gemini-3-flash-preview,200,185,0.925,149,0.745,544,600,0.906667
-moonshotai__kimi-k2.5,200,187,0.935,163,0.815,558,600,0.93
-openai__gpt-5.2,200,174,0.87,138,0.69,530,600,0.883333
