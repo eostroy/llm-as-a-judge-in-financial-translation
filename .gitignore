@@ -17,6 +17,15 @@ env/
 logs/
 generation_errors*.jsonl
 *.errors.jsonl
+*.stdout.log
+*.stderr.log
+
+# Large exploratory raw corpora and temporary screening artifacts
+data/raw/docfee/
+data/raw/fincorpus/deepseek_screened/*dryrun*
+data/raw/fincorpus/fin_news_stream_sample*
+data/raw/fincorpus/fin_news_clean_candidates_400*
+data/raw/fincorpus/fin_news_zh_clean_400*
 
 # OS/editor files
 .DS_Store

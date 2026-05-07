@@ -1,0 +1,24 @@
+{
+  "started_at_utc": "2026-05-06T15:38:31.820325+00:00",
+  "input_jsonl": "data\\raw\\fincorpus\\fin_news_stream_sample.jsonl",
+  "url": null,
+  "target": 400,
+  "initial_accepted": 154,
+  "initial_reviewed": 188,
+  "scanned": 983,
+  "coarse_rejected": 306,
+  "skipped_reviewed": 150,
+  "model_reviewed": 527,
+  "model_accepted": 246,
+  "model_rejected": 281,
+  "errors": 0,
+  "model": "deepseek-chat",
+  "finished_at_utc": "2026-05-06T16:10:30.933387+00:00",
+  "final_accepted": 400,
+  "output_files": {
+    "accepted_jsonl": "C:\\Users\\15332\\Desktop\\llm-as-a-judge-v2\\data\\raw\\fincorpus\\deepseek_screened\\fin_news_deepseek_400.accepted.jsonl",
+    "accepted_txt": "C:\\Users\\15332\\Desktop\\llm-as-a-judge-v2\\data\\raw\\fincorpus\\deepseek_screened\\fin_news_deepseek_400.accepted.txt",
+    "reviews_jsonl": "C:\\Users\\15332\\Desktop\\llm-as-a-judge-v2\\data\\raw\\fincorpus\\deepseek_screened\\fin_news_deepseek_400.reviews.jsonl",
+    "errors_jsonl": "C:\\Users\\15332\\Desktop\\llm-as-a-judge-v2\\data\\raw\\fincorpus\\deepseek_screened\\fin_news_deepseek_400.errors.jsonl"
+  }
+}
